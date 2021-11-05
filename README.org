@@ -1,3 +1,14 @@
+#+Title: Curso de Visualización de Datos en _ETOPIA Arts Centre
+#+Author: Adolfo Antón Bravo
+#+Email: adolflow@infotics.es
+#+Description: Taller de 12 sesiones de visualización de datos
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:nil ::nil |:nil ^:nil -:nil f:nil *:nil <:nil
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w!) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+#+OPTIONS: author:nil email:nil creator:nil timestamp:nil 
+#+org-startup-with-inline-images: t
+#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
+#+Export_file_name: 
 
 * Curso de Visualización de Datos Urbanos Etopia 2021
 
@@ -34,14 +45,14 @@ Un repositorio con los contenidos del curso
 *** Repaso
 *** Mario Pérez-Montoro
 Presentación en [[file://src/pdf/mpm-sesion-i.pdf][PDF]]
+
 *** Github
 **** Datos
 - Organización: https://github.com/org/mpvdes
 - Equipo: https://github.com/org/mpvdes/etopia
 - Repositorio: https://github.com/mpvdes/etopia-2021
 **** Ayuda
-- Mi manual, https://github.com/flowsta/github
-- Mi web, http://flowsta.github.io/github/
+- Manual de Adolfo Antón Bravo: repositorio en github https://github.com/flowsta/github y web http://flowsta.github.io/github/
 - Web oficial, https://git-scm.com/
 
 **** Clonado y actualización del repositorio
@@ -59,118 +70,38 @@ Presentación en [[file://src/pdf/mpm-sesion-i.pdf][PDF]]
 *** Configuración nano
 *** Vídeo: aparcamientos en EE.UU.
 *** Vídeo: casas en EE.UU
-** Ejemplos
-- NPR, Housing Segregation,  Let's Talk: Video housing segregation in everything, https://www.npr.org/sections/codeswitch/2018/04/11/601494521/video-housing-segregation-in-everything
-- Serie: https://www.npr.org/series/718730324/video
-*** R
-R es un lenguaje de programación libre de análisis estadístico. Es decir, es similar a trabajar con:
-- Excel, si lo utilizas con esa finalidad.
-- SPSS, de IBM.
-- Stata
-- otros...
-**** Trabajar con R
-Hay varias opciones para trabajar con R:
-- La propia consola de R que lanzamos desde la terminal.
-- El programa GUI que abre la consola de R.
-- El programa RStudio.
-
-**** Instalación de la consola
-De momento vamos a instalar la consola para las próximas sesiones:
-- En Cygwin, =apt-cyg install R=
-- En OSX, =brew install r= si no quieres la versión gráfica o =brew cask install r= si quieres la GUI de R.
-- En Debian/Ubuntu GNU/Linux, =sudo apt install r-base=
-**** Enlaces
-- [[https://timogrossenbacher.ch/2015/12/why-data-journalists-should-start-using-r-in-2016/][Why data journalists should start using R in 2016]].
-- [[https://smach.github.io/R4JournalismBook/HowDoI.html][How Do I?...(do that in R)]]
-- http://rstudio-pubs-static.s3.amazonaws.com/6975_c4943349b6174f448104a5513fed59a9.html
-- https://www.r-bloggers.com/cross-tabulation-with-xtabs-exercises/
-**** BBPlot
-   :PROPERTIES:
-   :url:      https://github.com/bbc/bbplot
-   :END:
-
-R package that helps create and export ggplot2 charts in the style used by the BBC News data team
-**** Katie Jolly
-Es el caso de [[https://www.katiejolly.io/][Katie Jolly]] tal como explica en su artículo [[https://www.katiejolly.io/blog/2019-04-25/data-driven-design][Data Driven Design]]: Data-driven design in 'Curious City: In, Out, Above, Beyond Saint Paul', donde expone su interés por el llamado "information design" o diseño de información y cómo utiliza R y software de diseño gráfico para crear una visualización llamada "Turning the Page" para el libro "Curious City: In, Out, Above, Beyond Saint Paul".
-
-#+caption: Trabajo final K. Jolly
-https://www.katiejolly.io/blog//assets/curious-city/kjolly_final.png
-
-El interés le vino siguiendo el trabajo de [[https://spatial.ly/][James Chesire]] que suponía que, dado que era un usuario de [[https://cran.r-project.org/][R]] y de [[https://ggplot2.tidyverse.org/][ggplot2]], igual usaba software libre.
-
-https://www.katiejolly.io/blog//assets/curious-city/treasures_before_after.jpg
-
-De hecho el ejemplo anterior está sacado del artículo [[http://theinformationcapital.com/coder-designer/][The coder and the designer]] donde cuenta su experiencia con R y cómo se apoya en sus visualizaciones para el arte final.
-**** BBC R and Data Journalism Cookbook for R Graphics
-   :PROPERTIES:
-   :url:      https://bbc.github.io/rcookbook/
-   :END:
-At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.
-
 ** Sesión 5. 5/11
+*** Comunicación visual con tablas
 *** Google Spreadsheet
 **** ImportURL
 
 #+begin_example
-IMPORTHTML(url; consulta; índice)
-#+end_example
-
-#+begin_example
-=IMPORTHTML("https://es.wikipedia.org/wiki/Esc%C3%A1ndalo_de_emisiones_contaminantes_de_veh%C3%ADculos_Volkswagen";"table";3)
-#+end_example
-
-#+begin_example
-=IMPORTHTML("https://es.wikipedia.org/wiki/Esc%C3%A1ndalo_de_emisiones_contaminantes_de_veh%C3%ADculos_Volkswagen";"list";5)
-#+end_example
-
-#+begin_example
-=IMPORTHTML("https://es.wikipedia.org/wiki/Esc%C3%A1ndalo_de_emisiones_contaminantes_de_veh%C3%ADculos_Volkswagen";"list";6)
-#+end_example
-
-#+begin_example
-=IMPORTHTML("http://en.wikipedia.org/wiki/2012_Summer_Olympics_medal_table";"table";2)
-#+end_example
-
-#+begin_example
-=IMPORTHTML("http://cincodias.com"; "table"; 2)
+IMPORTHTML("url"; "consulta"; índice)
 #+end_example
 **** ImportXML
 #+begin_example
-=IMPORTXML("http://cincodias.com/cincodias/economia.html";"//div[@class='mod_i']//h3")
+=IMPORTXML("url";"xpath")
 #+end_example
+
 Otras opciones:
-- =count(//div[@class='textoNovedadesSeccionInterior']//a/@href)=
+- =count(//div[@class='']//a/@href)=
 - =//img/@alt=
 - =//a[contains('Escuela')]/@href=
 
 **** ImportFeed
 #+begin_example
-=importfeed("http://cincodias.com/rss/tags/ultimas_noticias.xml";"items url";VERDADERO;250)
+=importfeed("url";"items url";VERDADERO;250)
 #+end_example
 
 url: http://www.ft.com/rss/home/europe
 #+begin_example
 =importfeed(B2;"items url";VERDADERO;250)
 #+end_example
-
-https://elpais.com/tag/dia_internacional_eliminacion_violencia_contra_la_mujer/a/
-https://elpais.com/tag/rss/dia_internacional_eliminacion_violencia_contra_la_mujer/a
-#+begin_example
-=importfeed(C1;"items url";VERDADERO;250)
-#+end_example
-
-http://www.ejercito.mde.es/unidades/Madrid/index.html
-http://www.ine.es/prensa/epa_tabla.htm
-
-#+begin_example
-=IMPORTHTML(C1;"table";2)
-#+end_example
 *** Open Refine
   - https://openrefine.org/
 - "A free, open source, powerful tool for working with messy data"
 - La navaja suiza de la limpieza de datos.
 - En la versión 3.4.1, en la versión para Windows, está la opción de descargarlo con [[https://adoptopenjdk.net/about.html][OpenJDK]] incluido.
-
 *** Python
 **** csvkit
    :PROPERTIES:
@@ -194,16 +125,216 @@ Lanzamos:
 jupyter notebook
 #+end_example
 
+* Ejemplos
+- Ciudad Desigual: https://jllopc.github.io/ciudad.desigual/
+- Territorio de datos: https://territoriodedatos.org
+- Why American public transit is so bad, https://www.vox.com/videos/21529609/usa-public-transit-trains-buses-cars
+- NPR, Housing Segregation,  Let's Talk: Video housing segregation in everything, https://www.npr.org/sections/codeswitch/2018/04/11/601494521/video-housing-segregation-in-everything
+- Serie NPR: https://www.npr.org/series/718730324/video
+- Implant Files: https://medicaldevices.icij.org/
+- Offshore Leaks, https://offshoreleaks.icij.org/
+- Wikileaks, https://wikileaks.org/
+- NICAR, https://www.ire.org/nicar/
+- TRESCA, https://trescaproject.eu, Trustworthy, Reliable and Engaging Scientific Communication Approaches
+
+** R
+R es un lenguaje de programación libre de análisis estadístico. Es decir, es similar a trabajar con:
+- Excel, si lo utilizas con esa finalidad.
+- SPSS, de IBM.
+- Stata
+- otros...
+*** Trabajar con R
+Hay varias opciones para trabajar con R:
+- La propia consola de R que lanzamos desde la terminal.
+- El programa GUI que abre la consola de R.
+- El programa RStudio.
+
+*** Instalación de la consola
+De momento vamos a instalar la consola para las próximas sesiones:
+- En Cygwin, =apt-cyg install R=
+- En OSX, =brew install r= si no quieres la versión gráfica o =brew cask install r= si quieres la GUI de R.
+- En Debian/Ubuntu GNU/Linux, =sudo apt install r-base=
+*** Enlaces
+- [[https://timogrossenbacher.ch/2015/12/why-data-journalists-should-start-using-r-in-2016/][Why data journalists should start using R in 2016]].
+- [[https://smach.github.io/R4JournalismBook/HowDoI.html][How Do I?...(do that in R)]]
+- http://rstudio-pubs-static.s3.amazonaws.com/6975_c4943349b6174f448104a5513fed59a9.html
+- https://www.r-bloggers.com/cross-tabulation-with-xtabs-exercises/
+*** BBPlot
+    :PROPERTIES:
+    :url:      https://github.com/bbc/bbplot
+    :END:
+
+R package that helps create and export ggplot2 charts in the style used by the BBC News data team
+*** Katie Jolly
+Es el caso de [[https://www.katiejolly.io/][Katie Jolly]] tal como explica en su artículo [[https://www.katiejolly.io/blog/2019-04-25/data-driven-design][Data Driven Design]]: Data-driven design in 'Curious City: In, Out, Above, Beyond Saint Paul', donde expone su interés por el llamado "information design" o diseño de información y cómo utiliza R y software de diseño gráfico para crear una visualización llamada "Turning the Page" para el libro "Curious City: In, Out, Above, Beyond Saint Paul".
+
+#+caption: Trabajo final K. Jolly
+https://www.katiejolly.io/blog//assets/curious-city/kjolly_final.png
+
+El interés le vino siguiendo el trabajo de [[https://spatial.ly/][James Chesire]] que suponía que, dado que era un usuario de [[https://cran.r-project.org/][R]] y de [[https://ggplot2.tidyverse.org/][ggplot2]], igual usaba software libre.
+
+https://www.katiejolly.io/blog//assets/curious-city/treasures_before_after.jpg
+
+De hecho el ejemplo anterior está sacado del artículo [[http://theinformationcapital.com/coder-designer/][The coder and the designer]] donde cuenta su experiencia con R y cómo se apoya en sus visualizaciones para el arte final.
+*** BBC R and Data Journalism Cookbook for R Graphics
+    :PROPERTIES:
+    :url:      https://bbc.github.io/rcookbook/
+    :END:
+At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.
+
 * Datos
-- https://freesound.org/search/?q=zaragoza
-- https://commons.wikimedia.org/w/index.php?search=zaragoza&title=Special:MediaSearch&go=Go&type=image
-- https://archive.org/search.php?query=zaragoza
-- https://www.gutenberg.org/ebooks/search/?query=zaragoza&submit_search=Go%21
-- https://www.zaragoza.es/sede/portal/datos-abiertos/
+** Recursos libres
+- Freesound: https://freesound.org/search/?q=zaragoza
+- Wikimedia:  https://commons.wikimedia.org/w/index.php?search=zaragoza&title=Special:MediaSearch&go=Go&type=image
+- Archive: https://archive.org/search.php?query=zaragoza
+- Gutenberg Project: https://www.gutenberg.org/ebooks/search/?query=zaragoza&submit_search=Go%21
+** Zaragoza
+- Datos abiertos Zaragoza: https://www.zaragoza.es/sede/portal/datos-abiertos/
+- El bosque de los zaragozanos: https://www.zaragoza.es/sede/portal/medioambiente/elbosquedeloszaragozanos/area-descargas
+- Contratación pública: https://www.zaragoza.es/sede/servicio/contratacion-publica/
+- Información polínica, https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/polen/servicio/informacion-polen/
+- Calidad del aire: https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/
+- 
+** Datos de prueba
 - [[https://visdatasets.github.io/][Dataset for visualisation construction]]
 - [[https://docs.google.com/spreadsheets/d/1oHcxlAbkTJmqfOxYQM22cvjjjRf5pETIF30x7L-qybc/edit#gid=0][The Guardian Polls]]
+** España
 - [[http://aduanas.camaras.org/][Base de datos de comercio exterior]]
 - [[http://www.cnmv.es/portal/home.aspx][CNMV]]
-- http://www.ejercito.mde.es/unidades/Madrid/index.html
-- http://www.ine.es/prensa/epa_tabla.htm
-- https://visdatasets.github.io/
+- Ejército, http://www.ejercito.mde.es/unidades/Madrid/index.html
+- INE, http://www.ine.es/prensa/epa_tabla.htm
+- datos.gob.es, https://datos.gob.es
+- IGN, https://datos.ign.es/
+** Contaminación
+- Red Nacional de estaciones de medición: https://sig.mapama.gob.es/calidad-aire/
+- Datos oficiales Calidad del Aire 2018: https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/datos/Datos_oficiales_2018.aspx
+- La mortalidad por cáncer en ciudades situadas en las proximidades de incineradoras e instalaciones para la recuperación o eliminación de residuos peligrosos: https://www.sciencedirect.com/science/article/abs/pii/S0013935116311197?via%3Dihub
+- Asociación entre Incineradoras de Residuos Municipales y Cáncer de mama invasivo: http://www.casmadrid.org/index.php/documentos/1163-asociacion-entre-incineradoras-de-residuos-municipales-y-cancer-de-mama-invasivo
+- Datos diarios Madrid 2001 - 2020: https://datos.madrid.es/sites/v/index.jsp?vgnextoid=aecb88a7e2b73410VgnVCM2000000c205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD
+** COVID19
+- https://github.com/CSSEGISandData/COVID-19/
+
+* Software
+** Cygwin
+*** apt-cyg
+El gestor de paquetes de Cygwin, sigue las [[https://github.com/transcode-open/apt-cyg][instrucciones]] oficiales o consulta mi [[https://flowsta.github.io/bases-periodismo-datos/#org47541ce][manual]].
+
+** brew
+[[https://flowsta.github.io/bases-periodismo-datos/#orgf689bc4][Brew]] es el gestor de paquetes para el emulador de Terminal de Mac.
+** WSL
+** nano
+*** nanorc
+** Editor de textos
+Se recomienda nano pero si queréis otra opción [[https://blog.infotics.es/2015/11/11/editor-de-textos/][aquí tenéis]] una lista con algunos de los más usados
+** Navegador gráfico
+- [[https://www.mozilla.org/en-US/firefox/new/][Firefox]]
+- [[https://www.chromium.org/Home][Chromium]] o [[https://www.google.com/chrome][Chrome]]
+- [[https://www.opera.com/es][Opera]]
+
+** Git
+- [[https://git-scm.com][Página oficial]]
+- [[https://github.com][Github]]
+- [[https://gitlab.com][Gitlab]]
+- [[https://flowsta.github.io/github][Manual de Adolfo Antón Bravo]]
+
+** Python
+*** Instalación
+Podemos instalarlo de [[https://www.python.org/downloads/][python.org]] o bien desde la terminal. Instalamos la versión 3 porque la rama 2 ya está con fecha de caducidad.
+
+**** Windows Cygwin
+#+begin_src bash
+apt-cyg install python3
+#+end_src
+
+**** OSX Brew
+#+begin_src bash
+brew install python3
+#+end_src
+
+**** GNU/Linux (incluido WSL)
+#+begin_src bash
+sudo apt install python3
+#+end_src
+
+*** Arrancamos python
+
+Una vez que lo tenemos instalado, si es desde la terminal, se lanza con ~python~ y veremos que el /prompt/ cambia y se pone con tres caracteres de "mayor que" ~>>>~.
+
+Para poder utilizar librerías lo mejor es instalar *pip* que es un gestor de librerías/paquetes en python.
+
+¡Buenas noticias! Desde la versión de python 3.4 viene con pip preinstalado! (también en la rama 2.7 desde la versión 2.7.9)
+
+*** Comprobar versión
+Lo podemos hacer con:
+#+begin_src bash
+python --version
+#+end_src
+Si tuvieras python2 y python3 instalado, aquí te podría salir la versión 2.7 y entonces tendrías que repetir el comando con =python3 --version= y acordarte de siempre llamar a python3.
+Este mensaje también te vale para =pip=
+*** pip
+Se puede comprobar que está instalado preguntando qué versión tiene:
+#+begin_src bash
+pip --version
+#+end_src
+Para cualquier duda se puede ir a la ayuda https://pip.pypa.io/en/stable/installation/
+*** Jupyter
+*** [[https://matplotlib.org/][Matplotlib]]
+*** [[https://demo.bokeh.org/][Bokeh]]
+*** csvkit
+   :PROPERTIES:
+   :url:      https://csvkit.readthedocs.io/en/latest/tutorial.html
+   :END:
+Instalación:
+#+begin_example
+pip install csvkit
+#+end_example
+
+** R
+Descargarse [[https://www.r-project.org/][R]] es fácil pero si os parece complicado podéis bajaros también [[https://rstudio.com/][R-Studio]].
+
+*** RStudio
+*** Tidyverse
+*** BBPlot
+   :PROPERTIES:
+   :url:      https://github.com/bbc/bbplot
+   :END:
+
+R package that helps create and export ggplot2 charts in the style used by the BBC News data team
+*** BBC R and Data Journalism Cookbook for R Graphics
+   :PROPERTIES:
+   :url:      https://bbc.github.io/rcookbook/
+   :END:
+At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.
+
+** Tabula
+** OpenRefine
+- URL, https://openrefine.org
+- Manual de Adolfo Antón Bravo, https://github.com/flowsta/refine
+** Tesseract
+** Sistemas operativos
+- Debian GNU/Linux: https://debian.org
+- Ubuntu GNU/Linux: https://ubuntu.org
+- Tails: https://tails.boum.org/
+** VPN
+https://riseup.net/en/vpn
+** convert
+#+begin_src bash
+convert *.jpeg archivo.pdf
+#+end_src
+
+** Web
+*** Plantillas HTML
+
+ - Plantillas HTML5 en https://html5up.net/
+ - Bootstrap: https://getbootstrap.com/
+
+*** SSG
+
+ /Static Site Generator/ o sistemas de generación de contenido
+ estático:
+ - Jekyll, https://jekyllrb.com/
+ - Hugo, https://gohugo.io/
+ - 
+
+
+
