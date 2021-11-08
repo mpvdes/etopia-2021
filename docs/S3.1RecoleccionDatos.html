@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>3.1 Recolección de Datos</title>
+<meta name="author" content="(Julián Pérez y Adolfo Antón)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="modifications.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">3.1 Recolección de Datos</h1>
+</section>
+<section id="table-of-contents"><div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-org2ee0f3b">Antes de empezar&#x2026;</a></li>
+<li><a href="#/slide-org5c1ce80">Recolección de datos</a></li>
+<li><a href="#/slide-org941a934">La vida real</a></li>
+<li><a href="#/slide-orgcab81b3">Tabula</a></li>
+<li><a href="#/slide-orgb230a6d">Google spreadsheets</a></li>
+<li><a href="#/slide-org1e22368">Descarga de archivos con wget</a></li>
+<li><a href="#/slide-orgfbda02f">Descarga de archivos con curl</a></li>
+<li><a href="#/slide-org8b39390">La web como fuente de datos</a></li>
+<li><a href="#/slide-org0e73d17">Web Scrapping con Python</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-org2ee0f3b">
+<h2 id="org2ee0f3b">Antes de empezar&#x2026;</h2>
+<div class="outline-text-2" id="text-org2ee0f3b">
+</div>
+</section>
+<section id="slide-org57fac35">
+<h3 id="org57fac35">Dudas?</h3>
+<ul>
+<li>terminal</li>
+<li>nano</li>
+<li>github</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5c1ce80">
+<h2 id="org5c1ce80">Recolección de datos</h2>
+<div class="outline-text-2" id="text-org5c1ce80">
+</div>
+</section>
+<section id="slide-orge7c7b46">
+<h3 id="orge7c7b46">Acceso a la información</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026;</li>
+<li>&#x2026;garantizar el acceso a todas las personas sin importar edad, sexo,
+religión, condición social, orientación sexual, nacionalidad, etnia,
+discapacidad&#x2026;</li>
+<li>&#x2026;con una catalogación y motores de búsqueda, y usando el menor número de recursos.</li>
+<li>&#x2026;con licencias abiertas.</li>
+
+</ul>
+
+</aside>
+<ul>
+<li><b>Derecho</b> de las sociedades democráticas</li>
+<li>El <b>estado</b> salvaguarda el ejercicio de este derecho</li>
+<li>Garantizarlo de manera <b>digital y pública</b> a través de Internet</li>
+<li><b>Estándares abiertos, formatos interoperables y reutilizables</b></li>
+
+</ul>
+</section>
+<section id="slide-org645729f">
+<h3 id="org645729f">Organismos</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026;que reúne conjuntos de datos de las diferentes administraciones del estado.</li>
+<li>&#x2026;que velan por la promoción y protección de este derecho</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Públicos: <a href="https://datos.gob.es">datos.gob.es</a></li>
+<li>No Gubernamentales:
+<ul>
+<li><a href="https://okfn.org">Open Kwnoledge Foundation</a></li>
+<li><a href="https://www.access-info.org/">Access Info Europe</a></li>
+<li><a href="https://theodi.org/">ODI</a></li>
+<li><a href="https://www.proacceso.org/">ProAcceso</a></li>
+
+</ul></li>
+<li>El periodismo de datos obtiene sus fuentes de las instituciones pero no toda la información es accesible a los periodistas ni al público en general.</li>
+
+</ul>
+</section>
+<section id="slide-org360a9a6">
+<h3 id="org360a9a6">Ley de Transparencia</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026;</li>
+<li>&#x2026;</li>
+<li>&#x2026;sedes electrónicas o páginas web de forma gratuita, estructurada, interoperable, etc.</li>
+<li>&#x2026;</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Ley de Transparencia y Derecho de Acceso a la Información Pública</li>
+<li>Publicada en el BOE 10 Diciembre <b>2013</b></li>
+<li><b>Obliga</b> a que las administraciones publiquen información relevante y actual sin que la ciudadanía se la solicite a través de Internet</li>
+<li>¿Cuáles son las administraciones del estado?</li>
+
+</ul>
+</section>
+<section id="slide-org96097c3">
+<h3 id="org96097c3">Peticiones de información</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026;, es decir, a todos los documentos o contenidos elaborados o adquiridos por las entidades que se les aplica la ley de transparencia.</li>
+<li>&#x2026; porque suponga perjuicio para la seguridad nacional o pública, intereses económicos y comerciales, política económica y monetaria, secreto profesional, propiedad intelectual, protección del medio ambiente, entre otros casos.</li>
+<li>&#x2026;</li>
+<li>Podemos solicitar información a las Administraciones identificándonos e indicando una forma de contacto, pero&#x2026;</li>
+<li>&#x2026;  o dos si el volumen o complejidad lo hace necesario</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Derecho a <b>reclamar</b> acceso a la información pública</li>
+<li>Puede que la petición sea denegada</li>
+<li>Si afecta a datos personales especialmente protegidos, persona afectada consentimiento.</li>
+<li>No es obligatorio exponer los motivos de la solicitud de información.</li>
+<li>Administración tendrá un mes para resolver la consulta</li>
+
+</ul>
+</section>
+<section id="slide-orgf6639fa">
+<h3 id="orgf6639fa">Consejo de Transparencia y Buen Gobierno</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026; que vela por el mejor cumplimiento de las obligaciones contenidas en la ley de T.</li>
+<li>&#x2026;</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Petición denegada: apelar al <a href="https://www.consejodetransparencia.es/">Consejo de Transparencia y Buen Gobierno</a></li>
+<li>Organismo público independiente, con personalidad jurídica propia y plena capacidad de obrar pública y privada.</li>
+
+</ul>
+</section>
+<section id="slide-org6d3a723">
+<h3 id="org6d3a723">Administraciones públicas del estado</h3>
+<ul>
+<li>Administración General del Estado</li>
+<li>Administración de las Comunidades autónomas, ciudades autónomas Ceuta y Melilla</li>
+<li>Administraciones locales (municipios, etc.)</li>
+<li>Casa Real</li>
+<li>Congreso y Senado</li>
+<li>Tribunal Constitucional</li>
+<li>Banco de España</li>
+<li>Defensor del Pueblo</li>
+
+</ul>
+</section>
+<section id="slide-org6d3a723-split">
+
+<h3>Administraciones públicas del estado</h3>
+<ul>
+<li>Agencias estatales</li>
+<li>Entidades públicas empresariales</li>
+<li>Entidades gestoras de la Seguridad Social</li>
+<li>Fundaciones del sector público</li>
+<li>Sociedades mercantiles con participación &gt;50% entidades públicas</li>
+<li>etc.</li>
+
+</ul>
+</section>
+<section id="slide-orgb3f9394">
+<h3 id="orgb3f9394">Ética de recolección de datos</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026; que hacen las organicaciones de los datos</li>
+<li>&#x2026;</li>
+<li>&#x2026; Por ej.: sólo recoger datos de las áreas menos contaminadas de una ciudad</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Aplicación de normas éticas en la recolección, gestión y uso</li>
+<li>Organizaciones establecen pautas específicas para cada area de conocimiento</li>
+<li>No sólo se aplica la ética de uso de datos cuando haya datos personales involucrados</li>
+
+</ul>
+</section>
+<section id="slide-orgb3f9394-split">
+
+<h3>Ética de recolección de datos</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026; Esto es algo complementario, pero se escapan muchos otros aspectos por cubrir</li>
+<li>&#x2026;</li>
+<li>&#x2026;</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>No vale con cumplir las directivas y leyes de protección de datos.</li>
+<li>La ética debe de estar en todas las etapas del ciclo de vida y gestión del uso de datos.</li>
+<li>Ethicas Foundation</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org941a934">
+<h2 id="org941a934">La vida real</h2>
+<div class="outline-text-2" id="text-org941a934">
+</div>
+</section>
+<section id="slide-orgae93119">
+<h3 id="orgae93119">En la práctica</h3>
+<aside class="notes">
+<ul>
+<li>A pesar de todo el marco legal, lo cual es importante&#x2026; &#x2026;interoperable, bien categorizada&#x2026;</li>
+<li>&#x2026; incluso con dictamen a favor del CTBG</li>
+<li>&#x2026;</li>
+<li>Todo esto&#x2026;</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>Hay muchos casos en los que las administraciones no llegan a ofrecer los datos de una forma estructurada</li>
+<li>Se hacen las solicitudes de información y no se suministra</li>
+<li>Datos en PDF que contiene una imagen, un formato pensado para otra cosa</li>
+<li>No facilita recolectar esa información</li>
+
+</ul>
+</section>
+<section id="slide-org781bd08">
+<h3 id="org781bd08">Herramientas recolección datos</h3>
+<aside class="notes">
+<ul>
+<li>Por todo ello hemos de manejar una variedad de herramientas para conseguir esos datos.</li>
+<li>Y luego trabajar con ellos</li>
+
+</ul>
+
+</aside>
+<ul>
+<li>GUI (<i>Graphic User Interface</i>): Tabula, Google SpreadSheets</li>
+<li>CLI (<i>Command Line Interface</i>): <code>wget</code> y <code>curl</code></li>
+<li>Beautiful Soup (Pyhton)</li>
+<li>etc.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgcab81b3">
+<h2 id="orgcab81b3">Tabula</h2>
+<ul>
+<li><a href="https://tabula.technology/">Tabula</a> es una herramienta sencilla que nos sirve para extraer tablas de datos dentro de PDFs</li>
+<li>Es libre, de código abierto y fue creada por periodistas para periodistas</li>
+<li>Actualmente es un software que se mantiene por la comunidad de desarrollo de forma voluntaria</li>
+
+</ul>
+</section>
+<section id="slide-orgcab81b3-split">
+
+<h2>Tabula</h2>
+<ul>
+<li>Ocasionalmente ha tenido financiación para funciones específicas, pero nunca ha sido una iniciativa comercial</li>
+<li>Soportada por medios especializados y entidades con una visión amplia de los datos abiertos</li>
+
+</ul>
+</section>
+<section id="slide-org350d551">
+<h3 id="org350d551">IMPORTANTE!</h3>
+<p>
+Sólo funciona con PDFs basados en texto, no sirvirá para PDFs de escaneo de imágenes (para esto existen herramientas OCR, reconocimiento óptico de caracteres).
+</p>
+</section>
+<section id="slide-orgc5110b6">
+<h3 id="orgc5110b6">Práctica con Tabula</h3>
+<ul>
+<li>Tabula, como sabemos, no aparece como un programa sino que para abrirlo debemos ir a la carpeta donde lo tengamos y ejecutarlo.</li>
+<li>Al abrirse conecta con la máquina virtual de Java y arranca el programa como aplicación web en una pestaña del navegador si lo tenemos abierto o abre el navegador si no lo tenemos.</li>
+<li>Si no se abre, comprobad en un navegador esta dirección 127.0.0.1 en el puerto 8080, es decir, <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></li>
+
+</ul>
+</section>
+<section id="slide-orgc5110b6-split">
+
+<h3>Práctica con Tabula</h3>
+<ul>
+<li>Descargamos este <a href="https://www.xunta.gal/dog/Publicados/2021/20211027/AnuncioG0596-300921-0001_es.pdf">PDF</a> para trabajar sobre él.</li>
+<li>En Tabula, pinchamos en el botón "Browse" para cargar el PDF que acabamos de descargar.</li>
+<li>Después pulsamos el botón "Import".</li>
+
+</ul>
+</section>
+<section id="slide-orgc5110b6-split">
+
+<h3>Práctica con Tabula</h3>
+<ul>
+<li>Nos previsualizará el PDF que acabamos de importar</li>
+<li>Para empezar vamos a probar con la opción para que detecte de forma automática las tablas. Pinchamos botón "Autodetect Tables"</li>
+<li>Revisamos las tablas que ha detectado. Es posible que se haya dejado alguna por el camino o que la selección automática no encuadre bien la tabla.</li>
+
+</ul>
+</section>
+<section id="slide-orgc5110b6-split">
+
+<h3>Práctica con Tabula</h3>
+<ul>
+<li>Si esto ocurre, pinchamos y arrastramos los tiradores de la tabla para marcarla de forma manual.</li>
+<li>Cuando tengamos todo lo que queremos seleccionado pinchamos en "Preview &amp; Export Extracted Data"</li>
+<li>Si todo está bien exportamos en formato CSV y guardamos el archivo.</li>
+
+</ul>
+</section>
+<section id="slide-orgaf633c2">
+<h3 id="orgaf633c2">Abrir archivos CSV</h3>
+<ul>
+<li>Los archivos CSV son archivos de datos separados por comas, "Comma Separated Values".</li>
+<li>Hemos aprendido a ver CSV en la terminal? <a href="https://csvkit.readthedocs.io/en/latest/tutorial/1_getting_started.html">csvkit</a></li>
+<li>También podemos usar un programa gráfico como Excel &#x2013;si lo tenéis&#x2013; o Google Spreadsheets o <a href="https://www.libreoffice.org/">LibreOffice</a>, que es gratuito.</li>
+
+</ul>
+</section>
+<section id="slide-orgaf633c2-split">
+
+<h3>Abrir archivos CSV</h3>
+<ul>
+<li>En estos programas nos preguntará como queremos importarlo.</li>
+<li>Es importante que en conjunto de caracteres usemos "Unicode UTF-8" y en opciones de separador: separado por "coma".</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb230a6d">
+<h2 id="orgb230a6d">Google spreadsheets</h2>
+<ul>
+<li><i>Google Spreadsheets</i> cuenta con dos funciones muy interesantes para recopilar datos.</li>
+<li><code>importhtml</code> sirve para importar datos de tablas y listas.</li>
+<li><code>importxml</code> sirve para importar datos de cualquier parte de la página.</li>
+
+</ul>
+</section>
+<section id="slide-org460e7a4">
+<h3 id="org460e7a4">IMPORTHTML</h3>
+<ul>
+<li>Con <code>IMPORTHTML</code> podemos importar dos tipos de elementos, tabulados o <code>table</code> y listados <code>list</code> (<code>ul</code>, <code>ol</code> y <code>dl</code>)
+<ul>
+<li><code>ul</code>, que corresponde a <i>unordered list</i> o lista desordenada, la típica lista donde cada elemento aparece con un punto o un guión.</li>
+<li><code>ol</code>, que corresponde a <i>ordered list</i> o lista ordenada, donde los elementos del listado aparecerán ordenados, bien numérica o alfabéticamente, por ejemplo.</li>
+<li><code>dl</code>, corresponde con <i>description list</i>, listas de descripciones.</li>
+<li><code>list</code> no existe en HTML, es una forma de denominar desde la función todos los elementos de listado de HTML.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org460e7a4-split">
+
+<h3>IMPORTHTML</h3>
+<ul>
+<li>Se construye la expresión con la <i>url</i> entrecomillada, separado por punto y coma y entrecomillado el elemento del que queremos sacar la información, bien una lista <code>list</code> o una tabla <code>table</code>, seguido del número de elemento en la página de su mismo tipo, separado por otro punto y coma:</li>
+
+</ul>
+<pre class="example">
+=IMPORTHTML("URL";"list|table";n)
+</pre>
+<ul>
+<li>Si esos datos están bien estructurados en origen los podremos tener bien estructurados en nuestra hoja de datos.</li>
+
+</ul>
+</section>
+<section id="slide-org8f874b6">
+<h3 id="org8f874b6">Práctica con IMPORTHTML</h3>
+<ul>
+<li>Iniciamos sesión con la cuenta de gmail y vamos a <a href="https://drive.google.com/drive">drive</a> y creamos una hoja o directamente a <a href="https://docs.google.com/spreadsheets">google spreadsheets</a>.</li>
+<li>Para esta práctica queremos obtener la tabla "diez principales provincias por población" de este <a href="https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a">artículo en wikipedia</a>.</li>
+<li>Copiamos la url de este artículo y volvemos a la hoja de cálculo.</li>
+
+</ul>
+</section>
+<section id="slide-org8f874b6-split">
+
+<h3>Práctica con IMPORTHTML</h3>
+<ul>
+<li>En la primera celda de nuestra hoja introducimos esta estructura: <code>=IMPORTHTML("url";"elemento";numero-de-elemento")</code></li>
+<li>Para utilizar funciones acordaros de iniciarlas en la celda con el símbolo <code>=</code></li>
+<li>No hay una forma mágica de saber el número de elemento pero la ejecución de resultados es rápida por lo que vamos probando 1, 2, 3, hasta que lo conseguimos.</li>
+
+</ul>
+</section>
+<section id="slide-org8f874b6-split">
+
+<h3>Práctica con IMPORTHTML</h3>
+<ul>
+<li>Si lo hemos hecho bien deberían importarse los campos de la tabla que buscamos.</li>
+<li>Si no, nos dará un mensaje de error tipo <code>#error</code> o <code>#n/a</code> (de not available). si ocurre esto, revisamos el mensaje colocando el cursor encima de la celda y nos dará una pista de lo que estamos haciendo mal.</li>
+
+</ul>
+</section>
+<section id="slide-org8f874b6-split">
+
+<h3>Práctica con IMPORTHTML</h3>
+<ul>
+<li>Probamos lo mismo para importar la lista "Proporción hombres/mujer en España (2019)"</li>
+<li>En la función tenemos que cambiar <code>table</code> por <code>list</code> y cambiar el número hasta que demos con ella.</li>
+
+</ul>
+</section>
+<section id="slide-org8f874b6-split">
+
+<h3>Práctica con IMPORTHTML</h3>
+<ul>
+<li>Probamos esta función junto con la función <a href="https://developers.google.com/chart/interactive/docs/querylanguage"><code>query()</code></a> para filtrar y ordenar resultados</li>
+<li>Probaremos con esta <a href="http://acb.com/estadisticas-individuales/valoracion/temporada_id/2020/fase_id/107">tabla de la ACB</a>.</li>
+
+</ul>
+<pre class="example">
+=QUERY(IMPORTHTML("http://acb.com/estadisticas-individuales/valoracion/temporada_id/2020/fase_id/107";"table";1);"SELECT * WHERE Col1 &lt; 10";2)
+</pre>
+</section>
+<section id="slide-org8377fe7">
+<h3 id="org8377fe7">IMPORTXML</h3>
+<ul>
+<li>La función <code>=IMPORTXML</code> nos servirá para obtener más elementos de una web a diferencia de <code>IMPORTHTML</code>.</li>
+<li>Podremos obtener bloques de texto, listas, URLS a otras webs, a la fuente de imágenes, audios, videos, etc.</li>
+<li>Es una herramienta que nos sirve para casos sencillos de recopilación de datos de una manera gráfica.</li>
+
+</ul>
+</section>
+<section id="slide-org8377fe7-split">
+
+<h3>IMPORTXML</h3>
+<ul>
+<li>Tiene un poco más de complejidad que IMPORTHTML porque para encontrar los elementos que queremos de la web lo hacemos a través de peticiones o <i>querys</i> en lenguaje <a href="https://www.w3.org/TR/xpath">XPATH</a>.</li>
+<li>El esquema es:</li>
+
+</ul>
+<pre class="example">
+IMPORTXML("url";"consulta-xpath")
+</pre>
+</section>
+<section id="slide-org1aac5c3">
+<h3 id="org1aac5c3">XPATH</h3>
+<div class="outline-text-3" id="text-org1aac5c3">
+</div>
+</section>
+<section id="slide-org56b1a57">
+<h4 id="org56b1a57">XPATH</h4>
+<ul>
+<li><a href="https://www.w3.org/TR/xpath">XPath</a> viene de <i>XML Path Language</i> (lenguaje de rutas de XML), donde <i>XML</i> es <i>eXtensible Markup Language</i> o lenguaje de marcas extensible.</li>
+<li><a href="https://es.wikipedia.org/wiki/XPath">XPATH</a> es el acrónimo de <code>XML Path</code> o ruta XML. Es decir, se trata de identificar los nodos de un archivo XML. La web son archivos HTML pero al ser renderizados por el navegador crea un DOM (<i>Document Object Model</i>, modelo de objetos de documento) como un árbol de objetos que puede ser leído por XPATH.</li>
+<li>Nos permite navegar por los elementos y atributos de un documento XML.</li>
+<li>HTML es una forma de XML.</li>
+
+</ul>
+
+</section>
+<section id="slide-org5b925c6">
+<h4 id="org5b925c6">HTML y XML</h4>
+<ul>
+<li>La sintaxis de XML es similar a la de HTML.</li>
+<li>Pero los elementos son distintos y los propósitos también son diferentes.</li>
+<li>HTML nos permite dar formato a diversos contenidos de una página y XML nos ayuda a organizar los contenidos</li>
+<li>Además HTML tiene elementos predefinidos (<code>&lt;h1&gt;&lt;/h1&gt;</code>) mientras que XML nos permite crear elementos nuevos (<code>&lt;libro&gt;&lt;/libro&gt;</code>).</li>
+
+</ul>
+
+</section>
+<section id="slide-org6d851e9">
+<h4 id="org6d851e9">Archivo de datos</h4>
+<ul>
+<li>Por esta facilidad y capacidad de creación <code>XML</code> es uno de los formatos de datos.</li>
+<li>Sirve para componer documentos operables entre aplicaciones diferentes.</li>
+<li>Funciona como sistema de "bases de datos".</li>
+<li>XML es un documento "bien formado", se tiene que respetar una estructura jerárquica con las etiquetas que delimitan sus elementos.</li>
+<li>Las etiquetas deben de estar correctamente anidadas. HTML es más laxo en este sentido</li>
+
+</ul>
+</section>
+<section id="slide-org6d851e9-split">
+
+<h4>Archivo de datos</h4>
+<ul>
+<li>Sólo permiten un elemento raiz o root del que todos los demás sean parte</li>
+<li>Es sensible a mayúsculas y minúsculas (Case sensitive)</li>
+<li>Se recomienda un recorrido por esta guía de <a href="https://www.w3schools.com/xml/xpath_intro.asp">w3c</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org2f021f4">
+<h4 id="org2f021f4">Práctica con IMPORTXML</h4>
+<ul>
+<li>Abrimos una nueva hoja de cálculo y colocamos la siguiente función: <code>IMPORTXML("URL","XPATH QUERY")</code></li>
+<li>Vamos a probar con un ejemplo sencillo. En "URL" pegamos la siguiente manteniendo las comillas dobles: <a href="https://www.w3schools.com/xml/books.xml">https://www.w3schools.com/xml/books.xml</a></li>
+<li>Ahora tenemos que construir la consulta XPATH. Para ello repasaremos varias expresiones para seleccionar elementos que podemos ir probando con el XML que indicaba antes.</li>
+
+</ul>
+</section>
+<section id="slide-org2f021f4-split">
+
+<h4>Práctica con IMPORTXML</h4>
+<ul>
+<li>Prueba los diferentes ejemplos que vienen a continuación de expresiones XPATH en el campo "XPATH QUERY" dentro del IMPORTXML y compara los resultados con la estrucutra del archivo books.xml</li>
+<li>En la sesión probaremos estas expresiones en un documento HTML</li>
+
+</ul>
+</section>
+<section id="slide-orge9c7b93">
+<h4 id="orge9c7b93">Expresiones XPath</h4>
+<ul>
+<li>Veremos algunas expresiones XPATH pero si quieres profundizar <a href="https://devhints.io/xpath">aquí</a> puedes ver más expresiones y ejemplos</li>
+<li><code>/</code> Selecciona desde el nodo raiz.
+<ul>
+<li>Ejemplo: <code>/bookstore</code> Selecciona el elemento raiz <code>bookstore</code></li>
+<li>Ejemplo: <code>bookstore/book</code> Selecciona todos los elementos <code>book</code> que son parte de <code>bookstore</code></li>
+
+</ul></li>
+<li><code>//</code> Selecciona nodos en el documento desde el nodo actual que coincidan con la selección, no importa dónde estén
+<ul>
+<li>Ejemplo: <code>//book</code> Selecciona todos los elementos book no importan dónde estén</li>
+<li>Ejemplo: <code>bookstore//book</code> Selecciona todos los elementos <code>book</code> que son descendentes del elemento <code>bookstore</code>, no importa dónde estén dentro del elemento <code>bookstore</code>.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orge9c7b93-split">
+
+<h4>Expresiones XPath</h4>
+<ul>
+<li><code>.</code>, selecciona el nodo actual</li>
+<li><code>..</code>, selecciona el nodo padre del nodo actual.</li>
+<li><code>@</code> Selecciona atributos
+<ul>
+<li>Ejemplo: <code>//@lang</code> Selecciona todos los atributos que se llaman <code>lang</code></li>
+
+</ul></li>
+<li><code>[]</code> Se usan para seleccionar un nodo específico o un nodo que contiene un valor específico
+<ul>
+<li>Ejemplo: =/bookstore/book[1] Selecciona el primer book que es hijo del elemento bookstore</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orge9c7b93-split">
+
+<h4>Expresiones XPath</h4>
+<ul>
+<li>Otro ejemplo, si queremos obtener el listado de todos los atributos <code>href</code> que contiene el elemento <code>a</code> que</li>
+
+</ul>
+<p>
+corresponde a los enlaces, de la <i>URL</i>, de una página web, haremos:
+</p>
+<pre class="example">
+=IMPORTXML("URL";"//a/@href")
+</pre>
+</section>
+<section id="slide-org7421fdb">
+<h4 id="org7421fdb">Elementos que comienzan con&#x2026;</h4>
+<p>
+La potencia de <i>Xpath</i> es <i>infinita</i> y podemos hacer extracciones de datos muy concretas, como por ejemplo seleccionar solo los elementos que comiencen con una clase específica, como <code>[starts-with</code> y luego especificar la clase con el atributo <code>@</code> donde <code>class</code> es el valor del atributo <code>(@class, 'clase')</code>
+Podríamos elegir sólo los enlaces que tienen una determinada clase, lo que haríamos también con <i>XPath</i> de esta manera:
+</p>
+
+<pre class="example">
+=IMPORTXML("URL";"//a[@class='clase']")
+
+</pre>
+</section>
+<section id="slide-org7421fdb-split">
+
+<h4>Elementos que comienzan con&#x2026;</h4>
+<p>
+Si queremos sacar todos los enlaces de una <i>URL</i>, después de inspeccionar la página, comprobamos que los enlaces se encuentran en un <code>div</code> que tiene la clase <code>clase</code>. Construimos esta fórmula de <code>IMPORTXML</code>
+</p>
+
+<pre class="example">
+IMPORTXML("URL"; "//div[starts-with(@class,'clase')]")
+</pre>
+</section>
+<section id="slide-org7421fdb-split">
+
+<h4>Elementos que comienzan con&#x2026;</h4>
+<p>
+Si quisiéramos los enlaces, añadiríamos al final <code>//@href</code>, ya que el enlace se encuentra en el atributo de <code>a</code>, <code>href</code>
+</p>
+
+<pre class="example">
+=IMPORTXML("URL"; "//div[starts-with(@class,'clase')]//@href")
+
+</pre>
+
+<p>
+Puede ser que la página no traiga los enlaces absolutos sino que sean relativos, por lo que podemos concatenarlos con la función <code>CONCATENATE</code>:
+</p>
+
+<pre class="example">
+=CONCATENATE("URL",celda-resultados)
+
+</pre>
+
+<p>
+Y luego estiramos esta función al resto de las celdas que lo requieran.
+</p>
+
+</section>
+<section id="slide-org2ad3bcd">
+<h4 id="org2ad3bcd">Expresiones XPath II</h4>
+<ul>
+<li><code>[last()]</code> Selecciona el último elemento
+<ul>
+<li>Ejemplo: <code>/bookstore/book[last()]</code> Selecciona el último elemento book que es hijo del elemento bookstore</li>
+
+</ul></li>
+<li><code>[position()&lt;&gt;=número]</code> Selecciona el elemento o los elementos que se indiquen según el número y operador
+<ul>
+<li>Ejemplo: <code>/bookstore/book[position()&lt;3]</code> Selecciona los dos primeros elementos book que son hijos del elemento bookstore</li>
+
+</ul></li>
+<li><code>[@]</code> Selecciona todos los elementos que tienen el atributo que se indique
+<ul>
+<li>Ejemplo: <code>//title[@lang]</code> Selecciona todos los elementos title que tienen el atributo lang</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org2ad3bcd-split">
+
+<h4>Expresiones XPath II</h4>
+<ul>
+<li><code>*</code> Selecciona todos los elementos
+<ul>
+<li>Ejemplo: <code>/bookstore/*</code> Selecciona todos los elementos hijos del elemento bookstore</li>
+<li>Ejemplo: <code>//*</code> Selecciona todos los elementos del documento</li>
+
+</ul></li>
+<li><code>@*</code> Selecciona todos los elementos que tienen al menos un atributo
+<ul>
+<li>Ejemplo: <code>//title[@*]</code> Selecciona todos los elementos title que tienen al menos un atributo</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org1628749">
+<h4 id="org1628749">Algunos ejemplos XPath útiles:</h4>
+<ul>
+<li><code>//</code>, descarga todos los elementos de html que empiecen con <code>&lt;</code></li>
+<li><code>//a</code>, descarga todos los contenidos del elemento <code>a</code>, los enlaces, de la URL que decidamos.</li>
+<li><code>//a/@href</code>, descarga todos los contenidos del atributo <code>href</code> del elemento <code>a</code>, que corresponden con la URL del enlace.</li>
+<li><code>//input[@type</code>'text']/..=, descarga todos los elementos padre de los elementos de texto <code>input</code></li>
+<li><code>count(//p)</code>, cuenta el número de elementos que le digamos, en este caso párrafos <code>p</code></li>
+<li><code>//a[contains(@href, 'protesta')]/@href</code>, encuentra todos los enlaces que contienen la palabra <code>protesta</code></li>
+<li><code>//div[not(@class</code>'left')]=, encuentra todos los <code>div</code> cuyas clases no sean <code>left</code></li>
+<li><code>//img/@alt</code>, muestra todos los textos de los atributos <code>alt</code> de las imágenes <code>img</code></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1e22368">
+<h2 id="org1e22368">Descarga de archivos con wget</h2>
+<div class="outline-text-2" id="text-org1e22368">
+</div>
+</section>
+<section id="slide-orgbe31b36">
+<h3 id="orgbe31b36">URL y más allá</h3>
+<ul>
+<li>Si queremos interactuar con una web, hacer una página, hacer <i>web scraping</i>, en definitiva, entender algo de la <b>Web</b>, debemos saber qué es una <b>URL</b>.</li>
+<li><i>Uniform Resource Locator</i>, localizador de recursos uniformes. Esto ya da algunas pistas:
+<ul>
+<li>Es un <b>localizador</b>, luego seguirá alguna nomenclatura/patrón de localización.</li>
+<li>Localiza <b>recursos</b>, que es como se denominan genéricamente los archivos, documentos, páginas web, direcciones de correo electrónico o cualquier recurso electrónico que se encuentra en una red.</li>
+<li>Es <b>uniforme</b>, luego una <code>URL</code> no se construye distinta a otras.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org1dc3215">
+<h3 id="org1dc3215">Estructura URL</h3>
+<p>
+Veamos un ejemplo de URL, la web del diario británico <a href="https://www.theguardian.com/international%0A">The Guardian</a>:
+</p>
+
+<pre class="example">
+https://www.theguardian.com/international
+</pre>
+</section>
+<section id="slide-org1dc3215-split">
+
+<h3>Estructura URL</h3>
+<aside class="notes">
+<ul>
+<li>&#x2026;Técnicamente no hay ninguna necesidad de que el dominio <i>theguardian.com</i> se llame <i>www.theguardian.com</i> pero sirve para evidenciar, en la propia URL, que se trata de una página web de la <i>World Wide Web</i> (gran telaraña mundial, como se conoce a la Web)</li>
+<li></li>
+
+</ul>
+
+</aside>
+
+<p>
+Esta dirección <b>URL</b> se descompone en:
+</p>
+<ul>
+<li>Protocolo: <code>https</code> protocolo seguro de transmisión de hipertexto</li>
+<li>Separación protocolo-dominio: <code>://</code></li>
+<li>Dominio completo: los dominios se leen de derecha a izquierda en orden de importancia.
+<ul>
+<li>dominio mínimo: <code>theguardian.com</code></li>
+<li><code>.com</code>: es uno de los <a href="https://es.wikipedia.org/wiki/Dominio_de_nivel_superior">TLD</a> <i>Top-level Domain</i>, dominios de alto nivel.</li>
+<li><code>theguardian</code>: el proyecto, la entidad, la empresa <i>The Guardian</i></li>
+<li><code>www</code>: subdominio predeterminado <i>de facto</i>.</li>
+
+</ul></li>
+<li><code>/international</code>: esto ya pertenece a la estructura de ficheros/contenidos, es una carpeta donde tienen archivos u otras carpetas.</li>
+
+</ul>
+
+</section>
+<section id="slide-org7272696">
+<h3 id="org7272696"><code>wget</code></h3>
+<ul>
+<li><code>wget</code> es una herramienta de línea de comandos creada para descargar archivos usando los protocolos de Internet más conocidos: <code>HTTP</code>, <code>HTTPS</code>, <code>FTP</code>, <code>FTPS</code>.</li>
+<li>Es capaz de recuperar descargas que se quedaron a medias, sin volver a empezar de nuevo.</li>
+<li>Permite hacer copias de una web entera (<i>mirrors</i>) y poder analizarlas sin tener que estar conectados.</li>
+
+</ul>
+</section>
+<section id="slide-org7272696-split">
+
+<h3><code>wget</code></h3>
+<ul>
+<li>Descarga directorios de forma recursiva.</li>
+<li>La estructura sería la siguiente:</li>
+
+</ul>
+<pre class="example">
+wget -O ruta-local URL
+</pre>
+<ul>
+<li>Con la opción <code>-O</code> damos nombre al archivo que descargamos.</li>
+
+</ul>
+</section>
+<section id="slide-org7532f21">
+<h3 id="org7532f21">Certificados</h3>
+<ul>
+<li>Uno a de las formas de mejorar la calidad y confiabilidad de los contenidos de las páginas webs ha sido el uso del protocolo <code>https</code>.</li>
+<li>Cuando vemos una página web desde el ordenador, nuestro navegador tiene preinstalados certificados digitales que comprueban la autenticidad de los certificados de las páginas que solicitamos.</li>
+<li>Estos certificados también se utilizan con <code>wget</code> y <code>curl</code>.</li>
+
+</ul>
+</section>
+<section id="slide-orgaef0955">
+<h3 id="orgaef0955">Atención</h3>
+<p>
+Si no funciona porque no confía en los certificados:
+</p>
+<ul>
+<li>Puede ocurrir que el antivirus considere a <code>wget</code> y/o <code>curl</code> como virus.</li>
+<li>O bien no les deje hacer la consulta a los certificados de Cygwin.</li>
+
+</ul>
+</section>
+<section id="slide-org730f53c">
+<h3 id="org730f53c">wget - Ejemplo</h3>
+<pre class="example">
+wget -O ~/ruta-local-donde-quieres-descargar/conjuntoDatos.csv "URL"
+</pre>
+<ul>
+<li>Donde URL es: <a href="https://www.zaragoza.es/sede/servicio/vehiculo.csv?start=0&amp;rows=500">https://www.zaragoza.es/sede/servicio/vehiculo.csv?start=0&amp;rows=500</a></li>
+
+</ul>
+</section>
+<section id="slide-orge98466c">
+<h3 id="orge98466c">Rutas</h3>
+<ul>
+<li>Ten en cuenta que donde está puesto <code>~/ruta-local-donde-quieres-descargar</code> es el directorio dentro de tu espacio de usuarix <code>~/</code> donde quieres descargarlo.</li>
+<li>Si lo quieres hacer en la carpeta donde estás, simplemente pondrías el nombre del archivo.</li>
+<li>Otra cosa a tener en cuenta es que, al contrario que <code>curl</code>, no muestra el estado de la descarga por lo que se queda sin hacer nada hasta que termina.</li>
+
+</ul>
+
+</section>
+<section id="slide-orge1cb60f">
+<h3 id="orge1cb60f">wget - Descargar una lista de archivos I</h3>
+<p>
+Una opción muy interesante con wget es la opción <code>-i</code>, que permite descargar archivos que estén en una lista en un archivo de texto. 
+</p>
+<ul>
+<li>Para crear el archivo con las direcciones se pueden aplicar varias opciones.</li>
+
+</ul>
+</section>
+<section id="slide-org5ad7403">
+<h4 id="org5ad7403">Opción fácil</h4>
+<ul>
+<li>Creamos el archivo <code>nano censo-locales-madrid.txt</code></li>
+<li>Donde <code>censo-locales-madrid.txt</code> es el nombre del archivo y lo estamos creando en la carpeta en la que nos encontramos.</li>
+<li>Copiamos las cuatro direcciones, una en cada línea, guardamos y cerramos:</li>
+
+</ul>
+<pre class="example">
+https://datos.madrid.es/egob/catalogo/209548-255-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-258-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-256-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-257-censo-locales-historico.csv
+</pre>
+</section>
+<section id="slide-orgaf09fc1">
+<h4 id="orgaf09fc1">Opción avanzada</h4>
+<ul>
+<li>Utilizamos la función <code>echo</code> para crear este archivo. Hacemos esta línea por cada URL:</li>
+
+</ul>
+<pre class="example">
+echo "URL" &gt;&gt; censo-locales-madrid.txt
+</pre>
+<ul>
+<li>Donde "URL" es cada una de las líneas anteriores.</li>
+<li>No olvides las comillas dobles para encapsular la <code>URL</code>.</li>
+
+</ul>
+</section>
+<section id="slide-orgdfaa96b">
+<h3 id="orgdfaa96b">wget - Descargar una lista de archivos II</h3>
+<ul>
+<li>En cualquiera de las dos opciones, tendremos un archivo llamado <code>censo-locales-madrid.txt</code>.</li>
+<li>Comprobamos su contenido con <code>cat censo-locales-madrid.txt</code>. Nos deben aparecer las cuatro líneas.</li>
+<li>Descargamos con <code>wget -i censo-locales-madrid.txt</code>.</li>
+<li>Comprobamos con el comando <code>ls</code> que los ha descargado.</li>
+
+</ul>
+
+</section>
+<section id="slide-org8a1ec4f">
+<h3 id="org8a1ec4f">wget - Por tipo de archivo</h3>
+<ul>
+<li>Descarga todos los archivos de cierto tipo</li>
+
+</ul>
+<pre class="example">
+wget -A "*.xls" -r url
+</pre>
+<ul>
+<li>Ejemplo:</li>
+
+</ul>
+<pre class="example">
+wget --user-agent=Mozilla --no-directories --accept=*.xls -r -l 1 \
+https://www.zaragoza.es/sede/portal/datos-abiertos/servicio/catalogo/2080#Excel
+</pre>
+<ul>
+<li>Ignora los archivos de cierto tipo</li>
+
+</ul>
+<pre class="example">
+wget -R "*.exe" -r url
+</pre>
+
+</section>
+<section id="slide-org6003a8a">
+<h3 id="org6003a8a">wget - De forma recursiva</h3>
+<ul>
+<li>Con la opción <code>-r</code> descarga un sitio de forma recursiva y crea los directorios tal como están con <code>wget -r URL</code>.</li>
+<li>Puedes practicar con un sitio no muy extenso como el nuestro <code>wget -r https://mpvd.es</code>.</li>
+<li>Comprueba en la carpeta que genera el archivo <code>index.html</code> para visualizar en local la web descargada</li>
+<li>Como ves, faltan muchos elementos de la web de origen online</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgfbda02f">
+<h2 id="orgfbda02f">Descarga de archivos con curl</h2>
+<div class="outline-text-2" id="text-orgfbda02f">
+</div>
+</section>
+<section id="slide-org67b3828">
+<h3 id="org67b3828"><code>curl</code> - Descarga de archivos</h3>
+<ul>
+<li><code>curl</code> es una herramienta para transferir datos de o hacia un servidor a través de uno de los protocolos soportados.</li>
+<li>Soporta tanto <code>HTTP</code> como <code>HTTPS</code>.</li>
+<li>Dado que la salida estándar del comando es la pantalla, para descargarnos un archivo podríamos dirigir esa salida a un archivo con el operador <code>&gt;</code>.</li>
+<li>También podemos usar la opción <code>-o</code> y ponerle un nombre al archivo.</li>
+
+</ul>
+</section>
+<section id="slide-org67b3828-split">
+
+<h3><code>curl</code> - Descarga de archivos</h3>
+<ul>
+<li>O utilizar la opción <code>-O</code> y no cambiar el nombre:</li>
+
+</ul>
+<pre class="example">
+curl URL &gt; ruta-archivo
+curl -o nombre-archivo URL
+curl -O URL
+</pre>
+<ul>
+<li>Se pueden descargar varios archivos poniéndolos como</li>
+
+</ul>
+<pre class="example">
+curl -O url1 -O url2 -O url3
+</pre>
+
+<ul>
+<li>Probad con esta URL de alojamientos con más de 50 habitaciones:</li>
+
+</ul>
+<p>
+<a href="http://www.zaragoza.es/sede/servicio/alojamiento.csv?q=habitaciones=gt=50&amp;sort=habitaciones%20desc">http://www.zaragoza.es/sede/servicio/alojamiento.csv?q=habitaciones=gt=50&amp;sort=habitaciones desc</a>
+</p>
+
+</section>
+<section id="slide-orgde6dc52">
+<h3 id="orgde6dc52">curl - Reanudar descarga</h3>
+<ul>
+<li>Otras dos opciones interesantes son, la de <code>-C</code> para continuar una descarga que se paró</li>
+<li>Y <code>-z</code> para descargar de nuevo un archivo si se ha modificado en una fecha dada</li>
+
+</ul>
+<pre class="example">
+curl -z -21-dic-11
+</pre>
+</section>
+<section id="slide-orged52a85">
+<h3 id="orged52a85">curl: descargar una lista de archivos</h3>
+<pre class="example">
+https://datos.madrid.es/egob/catalogo/209548-148-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-151-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-149-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-150-censo-locales-historico.csv
+
+xargs -n 1 curl -O &lt; files.txt 
+</pre>
+</section>
+<section id="slide-orgbf4bfc4">
+<h3 id="orgbf4bfc4">Peticiones a una API desde curl</h3>
+<div class="outline-text-3" id="text-orgbf4bfc4">
+</div>
+</section>
+<section id="slide-org2c1a26d">
+<h4 id="org2c1a26d">Qué es una API</h4>
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones">API</a> es el acrónimo de <i>Application Programming Interface</i></li>
+<li>Es una declaración de cómo comunicarme con cierto software. En el caso que nos interesa nos comunicamos con las webs.</li>
+<li>De hecho, HTTP ya ofrece la base para la comunicación al modo API.</li>
+<li>Pero además hay webs con muchos datos &#x2013;medios de comunicación, portales de datos, redes sociales, etc.&#x2013; que utilizan APIs para mediar esa comunicación.</li>
+<li>Este tipo de APIs se les conoce como <a href="https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional">API REST</a></li>
+
+</ul>
+</section>
+<section id="slide-org03d8737">
+<h4 id="org03d8737">API REST</h4>
+<ul>
+<li><i>REST</i> (<i>Representational State Transfer</i>, transferencia del estado representacional) nace en 2000 por Roy Fielding, uno de los autores de HTTP.</li>
+<li>Son un conjunto de métodos (restricciones) para crear aplicaciones web sobre <i>HTTP</i>.</li>
+
+</ul>
+</section>
+<section id="slide-org03d8737-split">
+
+<h4>API REST</h4>
+<ul>
+<li>De esta forma podemos obtener datos, indicar la ejecución de operaciones sobre los datos (en formatos <i>XML</i> o <i>JSON</i>, fundamentalmente) con:
+<ul>
+<li><i>GET</i>, obtener, para recuperar un recurso.</li>
+<li><i>POST</i> se usa la mayoría de las veces para crear un nuevo recurso. También puede usarse para enviar datos a un recurso que ya existe para su procesamiento.</li>
+<li><i>PUT</i> es útil para crear o editar un recurso. En el cuerpo de la petición irá la representación completa del recurso.</li>
+<li><i>DELETE</i> se usa para eliminar un recurso.</li>
+
+</ul></li>
+<li>Sabiendo cómo funciona la API de alguien se pueden crear interfaces, aplicaciones (apps) o se pueden realizar consultas, que es lo que vamos a hacer.</li>
+<li>La mayoría de ellas requiere de registro para poder obtener unas claves conocidas como <i>API keys</i> para poder hacer las peticiones, pero también hay APIs que no requieren registro.</li>
+
+</ul>
+</section>
+<section id="slide-org4631971">
+<h4 id="org4631971">Consulta GET desde curl</h4>
+<ul>
+<li>Para ir más rápido probaremos con una API que no requiere de registro como la del portal: <a href="https://api.covid19api.com/">https://api.covid19api.com/</a></li>
+<li>Suele ocurrir que la frecuencia de las peticiones sea limitada, incluso aunque requiera registro.</li>
+<li>Cada <i>API</i> suele tener una página con la <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc">documentación de su API</a> para ver cómo se construyen las peticiones a través de las <a href="https://es.wikipedia.org/wiki/Identificador_de_recursos_uniforme">URI</a>s</li>
+<li>Los datos que devuelve tienen una estructura <a href="https://es.wikipedia.org/wiki/JSON">JSON</a> (<i>JavaScript Object Notation</i>), un formato de datos escrito en formato <i>JS</i> (<i>JavaScript</i>).</li>
+<li><p>
+Vamos a probar:
+</p>
+<pre  class="example" >
+curl --location --request GET 'URI' &gt; casosSpain.json
+</pre></li>
+
+</ul>
+<p>
+Donde <i>URI</i> es: <a href="https://api.covid19api.com/dayone/country/spain/status/confirmed">https://api.covid19api.com/dayone/country/spain/status/confirmed</a>
+</p>
+</section>
+<section id="slide-org9d0cd3f">
+<h4 id="org9d0cd3f">Ver código JSON</h4>
+<ul>
+<li>Podemos probar a abrir con Firefox el archivo <code>json</code> para visualizar mejor estos resultados</li>
+<li>Existe la herramienta <code>jq</code> para visualizarlo en la terminal también. La podéis instalar con <code>brew</code> o <code>apt-cyg</code>.</li>
+
+</ul>
+<pre class="example">
+cat archivo.json | jq
+</pre>
+<ul>
+<li>Si tenéis <code>Python</code> instalado se puede usar el comando <code>python -m json.tool casosSpain.json</code>. En este caso le decís a <i>Python</i> que use la librería <code>json.tool</code> como un <code>script</code></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org8b39390">
+<h2 id="org8b39390">La web como fuente de datos</h2>
+<div class="outline-text-2" id="text-org8b39390">
+</div>
+</section>
+<section id="slide-org1f9fb61">
+<h3 id="org1f9fb61">Inspección de la página</h3>
+<ul>
+<li>El inspector de la página es una herramienta que viene incorporada tanto en el navegador firefox como chrome.</li>
+<li>Viene de la antigua extensión <i>firebug</i> que servía para inspeccionar elementos de la página.</li>
+<li>Nos permite examinar y modificar el html y css de una página.</li>
+
+</ul>
+</section>
+<section id="slide-org1f9fb61-split">
+
+<h3>Inspección de la página</h3>
+<ul>
+<li>También podremos aplicar scripts sobre la página desde la consola. nos será útil para identificar elementos de la web rápidamente.</li>
+<li>Para acceder tanto en firefox como chrome podemos llegar de varias maneras:
+<ol>
+<li>en windows: <code>crtl+shift+i</code></li>
+<li>en mac: <code>cmd+shift+i</code></li>
+<li>haz click derecho en un elemento de la página web y selecciona "inspeccionar elemento" o "inspeccionar"</li>
+
+</ol></li>
+
+</ul>
+
+</section>
+<section id="slide-orgcf1646c">
+<h3 id="orgcf1646c">Navegación</h3>
+<div class="outline-text-3" id="text-orgcf1646c">
+</div>
+</section>
+<section id="slide-org05e8c96">
+<h4 id="org05e8c96">Operadores avanzados de búsqueda</h4>
+<ul>
+<li>Los motores de búsqueda nos pueden ayudar a encontrar la página web
+a la que queremos llegar o la imagen que queremos, pero también nos
+pueden servir como herramienta a través de sus operadores avanzados
+para filtrar, refinar y llegar a resultados diferentes</li>
+
+</ul>
+</section>
+<section id="slide-orga30cce7">
+<h4 id="orga30cce7">Google</h4>
+<ul>
+<li>Hay una opción de <a href="https://www.google.com/advanced_search">interfaz gráfica</a>.</li>
+<li>Si realizamos varias búsquedas es posible que nos pida resolver <i>captcha</i>.</li>
+<li>En <a href="https://github.com/flowsta/scraping#orgheadline23">este repositorio</a> podéis encontrar la mayoría de operadores de búsqueda</li>
+
+</ul>
+</section>
+<section id="slide-orga30cce7-split">
+
+<h4>Google</h4>
+<ul>
+<li>Para esta sesión vamos a repasar algunas expresiones útiles desde el propio buscador de <a href="https://www.google.com/">google</a>:
+<ul>
+<li>El operador <code>site:</code> busca sobre un sitio. Por ejemplo, <code>Filomena site:elmundo.es</code> dará resultados sobre la búsqueda "Filomena" dentro de la página <a href="https://www.elmundo.es">elmundo.es</a></li>
+<li>Operador <code>filetype</code> para tipo de archivo, por ejemplo, <code>filetype:pdf site:www.congreso.es presupuestos</code> busca archivos pdf sobre presupuestos en la página del congreso.</li>
+<li>para una búsqueda literal utilizamos comillas dobles. por ejemplo, <code>site:elpais.com "ley de transparencia"</code></li>
+<li>el operador menos elegimos las palabras que no queremos que vengan acompañadas de otras. por ejemplo, <code>site:eldiario.es ley -transparencia</code></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgd318a25">
+<h4 id="orgd318a25">Duckduckgo</h4>
+<ul>
+<li>También podemos utilizar otros motores de búsqueda como <a href="https://duckduckgo.com/">duckduckgo</a> con operadores de búsqueda similares a los de google</li>
+<li>Aquí podemos repasar su <a href="https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/">lista de operadores</a>.</li>
+<li>Existe una serie de operadores predefinidos para páginas de terceros o que funcionan como aplicaciónes. se llaman <a href="https://duck.co/ia">instant answers</a>.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org0e73d17">
+<h2 id="org0e73d17">Web Scrapping con Python</h2>
+<div class="outline-text-2" id="text-org0e73d17">
+</div>
+</section>
+<section id="slide-org0c82575">
+<h3 id="org0c82575">Qué es python?</h3>
+<ul>
+<li>Python es un lenguaje de programación de código abierto y multiplataforma</li>
+<li>Es un lenguaje interpretado, es decir, no tenemos que compilarlo, lo cual nos ahorra mucho tiempo de desarrollo</li>
+
+</ul>
+</section>
+<section id="slide-org0c82575-split">
+
+<h3>Qué es python?</h3>
+<ul>
+<li>Podemos instalar librerías dependiendo del propósito. Para esta sesión utilizaremos las siguientes:
+<ul>
+<li><b>Request</b>: es una librería para descargar contenidos web como hacemos con <code>curl</code> o <code>wget</code>.</li>
+<li><b>Beautiful Soup</b> (BS) es una librería para seleccionar el HTML de la web que descargamos como hacíamos con <code>XPath</code>. Su versión mantenida es la 4</li>
+<li><b>Selenium</b>: esta librería nos permite ejecutar acciones de navegación en un navegador para extraer contenidos que no cargan en la página hasta que se produce una acción, como puede ser el <i>scroll</i> o la navegación por un listado.</li>
+
+</ul></li>
+<li>Con estas tres librerías podemos descargarnos todo lo que queramos de una página web.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf6c2dfb">
+<h3 id="orgf6c2dfb">Intro a Python</h3>
+<ul>
+<li>En nuestro caso trabajaremos con <i>python3</i> que es la versión principal de desarrollo e incluye mejoras respecto a <i>python2</i>, versión que se encuentra sin soporte.</li>
+<li>Para iniciar <code>python</code> lo podemos hacer desde la terminal con <code>python</code> o <code>python3</code>, depende de nuestro <code>PATH</code>.</li>
+
+</ul>
+</section>
+<section id="slide-orgf6c2dfb-split">
+
+<h3>Intro a Python</h3>
+<ul>
+<li>Así entramos en la consola/terminal/intérprete de órdenes/comandos de <code>python</code>.</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="img/python3.png" alt="python3.png" width="80%" align="center" />
+</p>
+</div>
+<ul>
+<li>Podemos salir del intérpetre de python con la función <code>exit()</code> y enter.</li>
+
+</ul>
+</section>
+<section id="slide-orgf6c2dfb-split">
+
+<h3>Intro a Python</h3>
+<ul>
+<li>El interprete funciona de manera similar al <code>shell</code> de <code>unix</code> como hemos venido utilizándolo, lee y ejecuta comandos de forma interactiva</li>
+<li>Podemos revisar el historial con tecla arriba o <code>^P</code></li>
+<li>Cuando se le llama con un argumento de nombre de archivo o con un archivo como entrada estándar, lee y ejecuta un script desde ese archivo:</li>
+
+</ul>
+<pre class="example">
+echo 'print("¡Hola, mundo!")' &gt; hola.py
+python3 hola.py
+¡Hola, mundo!
+</pre>
+</section>
+<section id="slide-orgf6c2dfb-split">
+
+<h3>Intro a Python</h3>
+<ul>
+<li>Recomendamos un recorrido por los siguientes apartados de la documentación de Python3
+<ul>
+<li><a href="https://docs.python.org/es/3.6/tutorial/introduction.html#using-python-as-a-calculator">Python como calculadora</a></li>
+<li><a href="https://docs.python.org/es/3.6/tutorial/introduction.html#strings">Cadena de caracteres</a></li>
+<li><a href="https://docs.python.org/es/3.6/tutorial/introduction.html#lists">Listas</a></li>
+
+</ul></li>
+<li>Se puede continuar la guía para profundizar más, pero es importante tener claros los conceptos que hemos listado</li>
+
+</ul>
+</section>
+<section id="slide-orgc0d131b">
+<h3 id="orgc0d131b">Preparando python para escrapear</h3>
+<ul>
+<li>Lo primero que vamos a hacer es instalar las librerías o módulos para esta práctica</li>
+<li>Utilizaremos un módulo llamado <code>pip</code> que viene por defecto al instalar <code>python3</code>.</li>
+<li>Para instalar el módulo <code>requests</code> escribimos lo siguiente en la terminal</li>
+
+</ul>
+<pre class="example">
+python -m pip install requests
+</pre>
+<ul>
+<li>En vez de <code>python</code> puede que necesites poner <code>python3</code>.</li>
+
+</ul>
+</section>
+<section id="slide-orgc0d131b-split">
+
+<h3>Preparando python para escrapear</h3>
+<ul>
+<li>Repetimos lo mismo para <code>beautifulsoup4</code>.</li>
+<li>Nótese que podemos poner más de una librería en la línea de instalación:</li>
+
+</ul>
+<pre class="example">
+python -m pip install beautifulsoup4 selenium
+</pre>
+</section>
+<section id="slide-org8c8bfa5">
+<h3 id="org8c8bfa5">Bibliografía</h3>
+<ul>
+<li><a href="https://www.freecodecamp.org/learn/responsive-web-design/">https://www.freecodecamp.org/learn/responsive-web-design/</a></li>
+<li><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/">https://www.freecodecamp.org/learn/scientific-computing-with-python/</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/intro-to-beautiful-soup">https://programminghistorian.org/en/lessons/intro-to-beautiful-soup</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes]
+});
+
+</script>
+</body>
+</html>
