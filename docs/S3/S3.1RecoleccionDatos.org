@@ -1,0 +1,654 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: moon
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: timestamp:nil toc:1 num:nil author:nil date:nil
+:END:
+
+#+TITLE: 3.1 Recolección de Datos
+#+AUTHOR: Julián Pérez y Adolfo Antón
+#+DATE: [2021-11-04 jue]
+#+LANGUAGE: es
+#+EMAIL:info@julian-perez.com
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+REVEAL_EXTRA_CSS: modifications.css
+
+* Antes de empezar...
+** Dudas?
+- terminal
+- nano
+- github
+* Recolección de datos
+** Acceso a la información
+#+BEGIN_NOTES
+- ...
+- ...garantizar el acceso a todas las personas sin importar edad, sexo,
+  religión, condición social, orientación sexual, nacionalidad, etnia,
+  discapacidad...
+- ...con una catalogación y motores de búsqueda, y usando el menor número de recursos.
+- ...con licencias abiertas.
+#+END_NOTES
+- *Derecho* de las sociedades democráticas
+- El *estado* salvaguarda el ejercicio de este derecho 
+- Garantizarlo de manera *digital y pública* a través de Internet
+- *Estándares abiertos, formatos interoperables y reutilizables*
+** Organismos
+#+BEGIN_NOTES 
+- ...que reúne conjuntos de datos de las diferentes administraciones del estado.
+- ...que velan por la promoción y protección de este derecho
+#+END_NOTES
+- Públicos: [[https://datos.gob.es][datos.gob.es]]
+- No Gubernamentales:
+  - [[https://okfn.org][Open Kwnoledge Foundation]]
+  - [[https://www.access-info.org/][Access Info Europe]]
+  - [[https://theodi.org/][ODI]]
+  - [[https://www.proacceso.org/][ProAcceso]]
+- El periodismo de datos obtiene sus fuentes de las instituciones pero no toda la información es accesible a los periodistas ni al público en general.
+** Ley de Transparencia
+#+BEGIN_NOTES
+- ...
+- ...
+- ...sedes electrónicas o páginas web de forma gratuita, estructurada, interoperable, etc.
+- ...
+#+END_NOTES
+- Ley de Transparencia y Derecho de Acceso a la Información Pública
+- Publicada en el BOE 10 Diciembre *2013*
+- *Obliga* a que las administraciones publiquen información relevante y actual sin que la ciudadanía se la solicite a través de Internet
+- ¿Cuáles son las administraciones del estado?
+** Peticiones de información
+#+BEGIN_NOTES
+- ..., es decir, a todos los documentos o contenidos elaborados o adquiridos por las entidades que se les aplica la ley de transparencia.
+- ... porque suponga perjuicio para la seguridad nacional o pública, intereses económicos y comerciales, política económica y monetaria, secreto profesional, propiedad intelectual, protección del medio ambiente, entre otros casos.
+- ...
+- Podemos solicitar información a las Administraciones identificándonos e indicando una forma de contacto, pero...
+- ...  o dos si el volumen o complejidad lo hace necesario
+#+END_NOTES
+- Derecho a *reclamar* acceso a la información pública
+- Puede que la petición sea denegada
+- Si afecta a datos personales especialmente protegidos, persona afectada consentimiento.
+- No es obligatorio exponer los motivos de la solicitud de información.
+- Administración tendrá un mes para resolver la consulta
+** Consejo de Transparencia y Buen Gobierno
+#+BEGIN_NOTES
+- ... que vela por el mejor cumplimiento de las obligaciones contenidas en la ley de T.
+- ...
+#+END_NOTES
+- Petición denegada: apelar al [[https://www.consejodetransparencia.es/][Consejo de Transparencia y Buen Gobierno]]
+- Organismo público independiente, con personalidad jurídica propia y plena capacidad de obrar pública y privada.
+** Administraciones públicas del estado
+- Administración General del Estado
+- Administración de las Comunidades autónomas, ciudades autónomas Ceuta y Melilla
+- Administraciones locales (municipios, etc.)
+- Casa Real
+- Congreso y Senado
+- Tribunal Constitucional
+- Banco de España
+- Defensor del Pueblo
+#+REVEAL: split:t
+- Agencias estatales
+- Entidades públicas empresariales
+- Entidades gestoras de la Seguridad Social
+- Fundaciones del sector público
+- Sociedades mercantiles con participación >50% entidades públicas
+- etc.
+** Ética de recolección de datos
+#+BEGIN_NOTES
+- ... que hacen las organicaciones de los datos
+- ...
+- ... Por ej.: sólo recoger datos de las áreas menos contaminadas de una ciudad
+#+END_NOTES
+- Aplicación de normas éticas en la recolección, gestión y uso
+- Organizaciones establecen pautas específicas para cada area de conocimiento
+- No sólo se aplica la ética de uso de datos cuando haya datos personales involucrados
+#+REVEAL: split:t
+#+BEGIN_NOTES
+- ... Esto es algo complementario, pero se escapan muchos otros aspectos por cubrir
+- ...
+- ...
+#+END_NOTES
+- No vale con cumplir las directivas y leyes de protección de datos.
+- La ética debe de estar en todas las etapas del ciclo de vida y gestión del uso de datos.
+- Ethicas Foundation
+** Esquema de la ética de los datos (ODI)                          :noexport:
+- Descripción de nuestras fuentes de datos
+- ¿Cuáles son sus características principales?
+- ¿Quién tiene derechos y permisos sobre ellas y con quiénes se comparten?
+- ¿Qué limitaciones pueden tener en la actualidad?
+- ¿Qué políticas y legislación les son de aplicación?
+** Propósito del uso de los datos                                  :noexport:
+- ¿Entiende la gente cuál es su propósito?
+- ¿Quiénes pueden verse positivamente o negativamente afectados?
+- ¿Cómo podríamos minimizar el impacto negativo?
+- ¿Cómo podrían los afectados interactuar con la organización?
+- Gestión de riesgos
+- ¿Se están comunicando los riesgos adecuadamente?
+- ¿Cuál es la política de revisión de riesgos?
+- ¿Qué acciones están previstas?
+
+# https://datos.gob.es/es/noticia/la-etica-en-la-gestion-de-los-datos-0
+# https://theodi.org/article/data-ethics-canvas/
+# https://www.europeandataportal.eu/sites/default/files/open_data_and_privacy_v1_final_clean.pdf
+# http://www2.uiah.fi/projects/metodi/251.htm#tutksuoj
+# https://eticasfoundation.org/algorithmic-bias/bad-data/
+* La vida real
+** En la práctica
+#+BEGIN_NOTES
+- A pesar de todo el marco legal, lo cual es importante... ...interoperable, bien categorizada...
+- ... incluso con dictamen a favor del CTBG
+- ...
+- Todo esto...
+#+END_NOTES
+- Hay muchos casos en los que las administraciones no llegan a ofrecer los datos de una forma estructurada
+- Se hacen las solicitudes de información y no se suministra
+- Datos en PDF que contiene una imagen, un formato pensado para otra cosa
+- No facilita recolectar esa información
+** Herramientas recolección datos
+#+BEGIN_NOTES
+- Por todo ello hemos de manejar una variedad de herramientas para conseguir esos datos.
+- Y luego trabajar con ellos
+#+END_NOTES
+- GUI (/Graphic User Interface/): Tabula, Google SpreadSheets
+- CLI (/Command Line Interface/): =wget= y =curl=
+- Beautiful Soup (Pyhton)
+- etc.
+* Tabula
+- [[https://tabula.technology/][Tabula]] es una herramienta sencilla que nos sirve para extraer tablas de datos dentro de PDFs
+- Es libre, de código abierto y fue creada por periodistas para periodistas
+- Actualmente es un software que se mantiene por la comunidad de desarrollo de forma voluntaria
+#+REVEAL: split:t
+- Ocasionalmente ha tenido financiación para funciones específicas, pero nunca ha sido una iniciativa comercial
+- Soportada por medios especializados y entidades con una visión amplia de los datos abiertos
+** IMPORTANTE!
+Sólo funciona con PDFs basados en texto, no sirvirá para PDFs de escaneo de imágenes (para esto existen herramientas OCR, reconocimiento óptico de caracteres).
+** Práctica con Tabula
+ - Tabula, como sabemos, no aparece como un programa sino que para abrirlo debemos ir a la carpeta donde lo tengamos y ejecutarlo.
+ - Al abrirse conecta con la máquina virtual de Java y arranca el programa como aplicación web en una pestaña del navegador si lo tenemos abierto o abre el navegador si no lo tenemos.
+ - Si no se abre, comprobad en un navegador esta dirección 127.0.0.1 en el puerto 8080, es decir, http://127.0.0.1:8080
+ #+REVEAL: split:t
+ - Descargamos este [[https://www.xunta.gal/dog/Publicados/2021/20211027/AnuncioG0596-300921-0001_es.pdf][PDF]] para trabajar sobre él.
+ - En Tabula, pinchamos en el botón "Browse" para cargar el PDF que acabamos de descargar.
+ - Después pulsamos el botón "Import".
+ #+REVEAL: split:t
+ - Nos previsualizará el PDF que acabamos de importar
+ - Para empezar vamos a probar con la opción para que detecte de forma automática las tablas. Pinchamos botón "Autodetect Tables"
+ - Revisamos las tablas que ha detectado. Es posible que se haya dejado alguna por el camino o que la selección automática no encuadre bien la tabla.
+ #+REVEAL: split:t
+ - Si esto ocurre, pinchamos y arrastramos los tiradores de la tabla para marcarla de forma manual.
+ - Cuando tengamos todo lo que queremos seleccionado pinchamos en "Preview & Export Extracted Data"
+ - Si todo está bien exportamos en formato CSV y guardamos el archivo.
+** Abrir archivos CSV
+ - Los archivos CSV son archivos de datos separados por comas, "Comma Separated Values".
+ - Hemos aprendido a ver CSV en la terminal? [[https://csvkit.readthedocs.io/en/latest/tutorial/1_getting_started.html][csvkit]]
+ - También podemos usar un programa gráfico como Excel --si lo tenéis-- o Google Spreadsheets o [[https://www.libreoffice.org/][LibreOffice]], que es gratuito.
+ #+REVEAL: split:t
+ - En estos programas nos preguntará como queremos importarlo.
+ - Es importante que en conjunto de caracteres usemos "Unicode UTF-8" y en opciones de separador: separado por "coma".
+
+* Google spreadsheets 
+- /Google Spreadsheets/ cuenta con dos funciones muy interesantes para recopilar datos.
+- =importhtml= sirve para importar datos de tablas y listas.
+- =importxml= sirve para importar datos de cualquier parte de la página.
+** IMPORTHTML 
+- Con =IMPORTHTML= podemos importar dos tipos de elementos, tabulados o =table= y listados =list= (=ul=, =ol= y =dl=)
+  - =ul=, que corresponde a /unordered list/ o lista desordenada, la típica lista donde cada elemento aparece con un punto o un guión.
+  - =ol=, que corresponde a /ordered list/ o lista ordenada, donde los elementos del listado aparecerán ordenados, bien numérica o alfabéticamente, por ejemplo.
+  - =dl=, corresponde con /description list/, listas de descripciones.
+  - =list= no existe en HTML, es una forma de denominar desde la función todos los elementos de listado de HTML.
+#+REVEAL: split:t
+- Se construye la expresión con la /url/ entrecomillada, separado por punto y coma y entrecomillado el elemento del que queremos sacar la información, bien una lista =list= o una tabla =table=, seguido del número de elemento en la página de su mismo tipo, separado por otro punto y coma:
+#+BEGIN_EXAMPLE
+=IMPORTHTML("URL";"list|table";n)
+#+END_EXAMPLE
+- Si esos datos están bien estructurados en origen los podremos tener bien estructurados en nuestra hoja de datos.
+** Práctica con IMPORTHTML
+- Iniciamos sesión con la cuenta de gmail y vamos a [[https://drive.google.com/drive][drive]] y creamos una hoja o directamente a [[https://docs.google.com/spreadsheets][google spreadsheets]].
+- Para esta práctica queremos obtener la tabla "diez principales provincias por población" de este [[https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a][artículo en wikipedia]].
+- Copiamos la url de este artículo y volvemos a la hoja de cálculo.
+#+REVEAL: split:t
+- En la primera celda de nuestra hoja introducimos esta estructura: ==IMPORTHTML("url";"elemento";numero-de-elemento")=
+- Para utilizar funciones acordaros de iniciarlas en la celda con el símbolo ===
+- No hay una forma mágica de saber el número de elemento pero la ejecución de resultados es rápida por lo que vamos probando 1, 2, 3, hasta que lo conseguimos.
+#+REVEAL: split:t
+- Si lo hemos hecho bien deberían importarse los campos de la tabla que buscamos.
+- Si no, nos dará un mensaje de error tipo =#error= o =#n/a= (de not available). si ocurre esto, revisamos el mensaje colocando el cursor encima de la celda y nos dará una pista de lo que estamos haciendo mal.
+#+REVEAL: split:t
+- Probamos lo mismo para importar la lista "Proporción hombres/mujer en España (2019)"
+- En la función tenemos que cambiar =table= por =list= y cambiar el número hasta que demos con ella.
+#+REVEAL: split:t
+- Probamos esta función junto con la función [[https://developers.google.com/chart/interactive/docs/querylanguage][=query()=]] para filtrar y ordenar resultados
+- Probaremos con esta [[http://acb.com/estadisticas-individuales/valoracion/temporada_id/2020/fase_id/107][tabla de la ACB]].
+#+BEGIN_EXAMPLE
+=QUERY(IMPORTHTML("http://acb.com/estadisticas-individuales/valoracion/temporada_id/2020/fase_id/107";"table";1);"SELECT * WHERE Col1 < 10";2)
+#+END_EXAMPLE
+** IMPORTXML 
+- La función ==IMPORTXML= nos servirá para obtener más elementos de una web a diferencia de =IMPORTHTML=.
+- Podremos obtener bloques de texto, listas, URLS a otras webs, a la fuente de imágenes, audios, videos, etc.
+- Es una herramienta que nos sirve para casos sencillos de recopilación de datos de una manera gráfica.
+#+REVEAL: split:t
+- Tiene un poco más de complejidad que IMPORTHTML porque para encontrar los elementos que queremos de la web lo hacemos a través de peticiones o /querys/ en lenguaje [[https://www.w3.org/TR/xpath][XPATH]].
+- El esquema es:
+#+BEGIN_EXAMPLE
+  IMPORTXML("url";"consulta-xpath")
+#+END_EXAMPLE
+** XPATH
+*** XPATH
+ - [[https://www.w3.org/TR/xpath][XPath]] viene de /XML Path Language/ (lenguaje de rutas de XML), donde /XML/ es /eXtensible Markup Language/ o lenguaje de marcas extensible.
+ - [[https://es.wikipedia.org/wiki/XPath][XPATH]] es el acrónimo de =XML Path= o ruta XML. Es decir, se trata de identificar los nodos de un archivo XML. La web son archivos HTML pero al ser renderizados por el navegador crea un DOM (/Document Object Model/, modelo de objetos de documento) como un árbol de objetos que puede ser leído por XPATH.
+ - Nos permite navegar por los elementos y atributos de un documento XML.
+ - HTML es una forma de XML.
+
+*** HTML y XML
+ - La sintaxis de XML es similar a la de HTML.
+ - Pero los elementos son distintos y los propósitos también son diferentes.
+ - HTML nos permite dar formato a diversos contenidos de una página y XML nos ayuda a organizar los contenidos
+ - Además HTML tiene elementos predefinidos (=<h1></h1>=) mientras que XML nos permite crear elementos nuevos (=<libro></libro>=).
+
+*** Archivo de datos
+ - Por esta facilidad y capacidad de creación =XML= es uno de los formatos de datos.
+ - Sirve para componer documentos operables entre aplicaciones diferentes.
+ - Funciona como sistema de "bases de datos".
+ - XML es un documento "bien formado", se tiene que respetar una estructura jerárquica con las etiquetas que delimitan sus elementos.
+ - Las etiquetas deben de estar correctamente anidadas. HTML es más laxo en este sentido
+ #+REVEAL: split:t
+ - Sólo permiten un elemento raiz o root del que todos los demás sean parte
+ - Es sensible a mayúsculas y minúsculas (Case sensitive)
+ - Se recomienda un recorrido por esta guía de [[https://www.w3schools.com/xml/xpath_intro.asp][w3c]] 
+
+*** Práctica con IMPORTXML
+ - Abrimos una nueva hoja de cálculo y colocamos la siguiente función: =IMPORTXML("URL","XPATH QUERY")=
+ - Vamos a probar con un ejemplo sencillo. En "URL" pegamos la siguiente manteniendo las comillas dobles: https://www.w3schools.com/xml/books.xml 
+ - Ahora tenemos que construir la consulta XPATH. Para ello repasaremos varias expresiones para seleccionar elementos que podemos ir probando con el XML que indicaba antes.
+#+REVEAL: split:t
+ - Prueba los diferentes ejemplos que vienen a continuación de expresiones XPATH en el campo "XPATH QUERY" dentro del IMPORTXML y compara los resultados con la estrucutra del archivo books.xml
+ - En la sesión probaremos estas expresiones en un documento HTML
+*** Expresiones XPath
+ - Veremos algunas expresiones XPATH pero si quieres profundizar [[https://devhints.io/xpath][aquí]] puedes ver más expresiones y ejemplos
+ - =/= Selecciona desde el nodo raiz.
+   - Ejemplo: =/bookstore= Selecciona el elemento raiz =bookstore=
+   - Ejemplo: =bookstore/book= Selecciona todos los elementos =book= que son parte de =bookstore=
+ - =//= Selecciona nodos en el documento desde el nodo actual que coincidan con la selección, no importa dónde estén
+   - Ejemplo: =//book= Selecciona todos los elementos book no importan dónde estén
+   - Ejemplo: =bookstore//book= Selecciona todos los elementos =book= que son descendentes del elemento =bookstore=, no importa dónde estén dentro del elemento =bookstore=.
+#+REVEAL: split:t
+ - =.=, selecciona el nodo actual
+ - =..=, selecciona el nodo padre del nodo actual.
+ - =@= Selecciona atributos
+   - Ejemplo: =//@lang= Selecciona todos los atributos que se llaman =lang=
+ - =[]= Se usan para seleccionar un nodo específico o un nodo que contiene un valor específico
+   - Ejemplo: =/bookstore/book[1] Selecciona el primer book que es hijo del elemento bookstore
+#+REVEAL: split:t
+   - Otro ejemplo, si queremos obtener el listado de todos los atributos =href= que contiene el elemento =a= que
+ corresponde a los enlaces, de la /URL/, de una página web, haremos:
+ #+BEGIN_EXAMPLE
+   =IMPORTXML("URL";"//a/@href")
+ #+END_EXAMPLE
+*** Elementos que comienzan con...
+
+ La potencia de /Xpath/ es /infinita/ y podemos hacer extracciones de datos muy concretas, como por ejemplo seleccionar solo los elementos que comiencen con una clase específica, como =[starts-with= y luego especificar la clase con el atributo =@= donde =class= es el valor del atributo =(@class, 'clase')=
+ Podríamos elegir sólo los enlaces que tienen una determinada clase, lo que haríamos también con /XPath/ de esta manera:
+
+ #+BEGIN_EXAMPLE
+ =IMPORTXML("URL";"//a[@class='clase']")
+
+ #+END_EXAMPLE
+#+REVEAL: split:t
+  Si queremos sacar todos los enlaces de una /URL/, después de inspeccionar la página, comprobamos que los enlaces se encuentran en un =div= que tiene la clase =clase=. Construimos esta fórmula de =IMPORTXML=
+
+ #+BEGIN_EXAMPLE
+ IMPORTXML("URL"; "//div[starts-with(@class,'clase')]")
+ #+END_EXAMPLE
+#+REVEAL: split:t
+ Si quisiéramos los enlaces, añadiríamos al final =//@href=, ya que el enlace se encuentra en el atributo de =a=, =href=
+
+ #+BEGIN_EXAMPLE
+ =IMPORTXML("URL"; "//div[starts-with(@class,'clase')]//@href")
+
+ #+END_EXAMPLE
+
+ Puede ser que la página no traiga los enlaces absolutos sino que sean relativos, por lo que podemos concatenarlos con la función =CONCATENATE=:
+
+ #+BEGIN_EXAMPLE
+ =CONCATENATE("URL",celda-resultados)
+
+ #+END_EXAMPLE
+
+ Y luego estiramos esta función al resto de las celdas que lo requieran.
+
+*** Expresiones XPath II
+ - =[last()]= Selecciona el último elemento
+   - Ejemplo: =/bookstore/book[last()]= Selecciona el último elemento book que es hijo del elemento bookstore
+ - =[position()<>=número]= Selecciona el elemento o los elementos que se indiquen según el número y operador
+   - Ejemplo: =/bookstore/book[position()<3]= Selecciona los dos primeros elementos book que son hijos del elemento bookstore
+ - =[@]= Selecciona todos los elementos que tienen el atributo que se indique
+   - Ejemplo: =//title[@lang]= Selecciona todos los elementos title que tienen el atributo lang
+#+REVEAL: split:t
+ - =*= Selecciona todos los elementos
+   - Ejemplo: =/bookstore/*= Selecciona todos los elementos hijos del elemento bookstore
+   - Ejemplo: =//*= Selecciona todos los elementos del documento
+ - =@*= Selecciona todos los elementos que tienen al menos un atributo
+   - Ejemplo: =//title[@*]= Selecciona todos los elementos title que tienen al menos un atributo
+*** Algunos ejemplos XPath útiles:
+ - =//=, descarga todos los elementos de html que empiecen con =<=
+ - =//a=, descarga todos los contenidos del elemento =a=, los enlaces, de la URL que decidamos.
+ - =//a/@href=, descarga todos los contenidos del atributo =href= del elemento =a=, que corresponden con la URL del enlace.
+ - =//input[@type='text']/..=, descarga todos los elementos padre de los elementos de texto =input=
+ - =count(//p)=, cuenta el número de elementos que le digamos, en este caso párrafos =p=
+ - =//a[contains(@href, 'protesta')]/@href=, encuentra todos los enlaces que contienen la palabra =protesta=
+ - =//div[not(@class='left')]=, encuentra todos los =div= cuyas clases no sean =left=
+ - =//img/@alt=, muestra todos los textos de los atributos =alt= de las imágenes =img=
+
+*** Práctica sesión online                                         :noexport:
+ - Resolvemos dudas sobre las prácticas offline.
+ - Repasamos el uso de inspector de elementos.
+ - Descargamos ejemplo de [[https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Actualizacion_325_COVID-19.pdf][PDF]] COVID y lo probamos con Tabula. 
+ - Probar código =js= en consola de navegador para detectar tablas: =i=1; [].forEach.call(document.getElementsByTagName("table"), function(x){console.log(i++);});=
+ - Probar función =QUERY()= en los resultados de =IMPORTHTML=
+ - Probar =IMPORTXML= con una página =HTML=
+ - Recurso: [[http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm][XPath Expression Testbed]] Esta web nos permite evaluar nuestras expresiones sobre un archivo que carguemos
+* Descarga de archivos con wget
+** URL y más allá
+- Si queremos interactuar con una web, hacer una página, hacer /web scraping/, en definitiva, entender algo de la *Web*, debemos saber qué es una *URL*.
+- /Uniform Resource Locator/, localizador de recursos uniformes. Esto ya da algunas pistas:
+  - Es un *localizador*, luego seguirá alguna nomenclatura/patrón de localización.
+  - Localiza *recursos*, que es como se denominan genéricamente los archivos, documentos, páginas web, direcciones de correo electrónico o cualquier recurso electrónico que se encuentra en una red.
+  - Es *uniforme*, luego una =URL= no se construye distinta a otras.
+** Estructura URL
+Veamos un ejemplo de URL, la web del diario británico [[https://www.theguardian.com/international%0A][The Guardian]]:
+
+#+BEGIN_EXAMPLE
+https://www.theguardian.com/international
+#+END_EXAMPLE
+#+REVEAL: split:t
+#+BEGIN_NOTES
+- ...Técnicamente no hay ninguna necesidad de que el dominio /theguardian.com/ se llame /www.theguardian.com/ pero sirve para evidenciar, en la propia URL, que se trata de una página web de la /World Wide Web/ (gran telaraña mundial, como se conoce a la Web)
+- 
+#+END_NOTES
+
+Esta dirección *URL* se descompone en:
+- Protocolo: =https= protocolo seguro de transmisión de hipertexto
+- Separación protocolo-dominio: =://=
+- Dominio completo: los dominios se leen de derecha a izquierda en orden de importancia.
+  - dominio mínimo: =theguardian.com=
+  - =.com=: es uno de los [[https://es.wikipedia.org/wiki/Dominio_de_nivel_superior][TLD]] /Top-level Domain/, dominios de alto nivel.
+  - =theguardian=: el proyecto, la entidad, la empresa /The Guardian/
+  - =www=: subdominio predeterminado /de facto/.
+- =/international=: esto ya pertenece a la estructura de ficheros/contenidos, es una carpeta donde tienen archivos u otras carpetas.
+
+** =wget=
+- =wget= es una herramienta de línea de comandos creada para descargar archivos usando los protocolos de Internet más conocidos: =HTTP=, =HTTPS=, =FTP=, =FTPS=.
+- Es capaz de recuperar descargas que se quedaron a medias, sin volver a empezar de nuevo.
+- Permite hacer copias de una web entera (/mirrors/) y poder analizarlas sin tener que estar conectados.
+#+REVEAL: split:t
+- Descarga directorios de forma recursiva.
+- La estructura sería la siguiente:
+#+BEGIN_EXAMPLE
+wget -O ruta-local URL
+#+END_EXAMPLE
+- Con la opción =-O= damos nombre al archivo que descargamos.
+** Certificados
+- Uno a de las formas de mejorar la calidad y confiabilidad de los contenidos de las páginas webs ha sido el uso del protocolo =https=.
+- Cuando vemos una página web desde el ordenador, nuestro navegador tiene preinstalados certificados digitales que comprueban la autenticidad de los certificados de las páginas que solicitamos.
+- Estos certificados también se utilizan con =wget= y =curl=.
+** Atención
+Si no funciona porque no confía en los certificados:
+- Puede ocurrir que el antivirus considere a =wget= y/o =curl= como virus.
+- O bien no les deje hacer la consulta a los certificados de Cygwin.
+** wget - Ejemplo
+#+BEGIN_EXAMPLE
+wget -O ~/ruta-local-donde-quieres-descargar/conjuntoDatos.csv "URL"
+#+END_EXAMPLE
+- Donde URL es: https://www.zaragoza.es/sede/servicio/vehiculo.csv?start=0&rows=500 
+** Rutas
+- Ten en cuenta que donde está puesto =~/ruta-local-donde-quieres-descargar= es el directorio dentro de tu espacio de usuarix =~/= donde quieres descargarlo.
+- Si lo quieres hacer en la carpeta donde estás, simplemente pondrías el nombre del archivo.
+- Otra cosa a tener en cuenta es que, al contrario que =curl=, no muestra el estado de la descarga por lo que se queda sin hacer nada hasta que termina.
+
+** wget - Descargar una lista de archivos I
+Una opción muy interesante con wget es la opción =-i=, que permite descargar archivos que estén en una lista en un archivo de texto. 
+- Para crear el archivo con las direcciones se pueden aplicar varias opciones.
+*** Opción fácil
+- Creamos el archivo =nano censo-locales-madrid.txt=
+- Donde =censo-locales-madrid.txt= es el nombre del archivo y lo estamos creando en la carpeta en la que nos encontramos.
+- Copiamos las cuatro direcciones, una en cada línea, guardamos y cerramos:
+#+begin_example
+ https://datos.madrid.es/egob/catalogo/209548-255-censo-locales-historico.csv
+ https://datos.madrid.es/egob/catalogo/209548-258-censo-locales-historico.csv
+ https://datos.madrid.es/egob/catalogo/209548-256-censo-locales-historico.csv
+ https://datos.madrid.es/egob/catalogo/209548-257-censo-locales-historico.csv
+#+end_example
+*** Opción avanzada
+- Utilizamos la función =echo= para crear este archivo. Hacemos esta línea por cada URL:
+#+BEGIN_EXAMPLE
+echo "URL" >> censo-locales-madrid.txt
+#+END_EXAMPLE
+- Donde "URL" es cada una de las líneas anteriores.
+- No olvides las comillas dobles para encapsular la =URL=.
+** wget - Descargar una lista de archivos II
+- En cualquiera de las dos opciones, tendremos un archivo llamado =censo-locales-madrid.txt=.
+- Comprobamos su contenido con =cat censo-locales-madrid.txt=. Nos deben aparecer las cuatro líneas.
+- Descargamos con =wget -i censo-locales-madrid.txt=.
+- Comprobamos con el comando =ls= que los ha descargado.
+
+** wget - Por tipo de archivo
+- Descarga todos los archivos de cierto tipo
+#+BEGIN_EXAMPLE
+wget -A "*.xls" -r url
+#+END_EXAMPLE
+- Ejemplo:
+#+BEGIN_EXAMPLE
+wget --user-agent=Mozilla --no-directories --accept=*.xls -r -l 1 \
+https://www.zaragoza.es/sede/portal/datos-abiertos/servicio/catalogo/2080#Excel
+#+END_EXAMPLE
+- Ignora los archivos de cierto tipo
+#+BEGIN_EXAMPLE
+wget -R "*.exe" -r url
+#+END_EXAMPLE
+
+** wget - De forma recursiva
+- Con la opción =-r= descarga un sitio de forma recursiva y crea los directorios tal como están con =wget -r URL=.
+- Puedes practicar con un sitio no muy extenso como el nuestro =wget -r https://mpvd.es=.
+- Comprueba en la carpeta que genera el archivo =index.html= para visualizar en local la web descargada
+- Como ves, faltan muchos elementos de la web de origen online
+** wget - más argumentos                                           :noexport:
+- Podemos usar una serie de opciones para que nos descarguen más elementos de la web y que sea más parecida a la de origen.
+  - =-k= de esta manera los enlaces apuntarán a directorios locales (/offline/) y no a enlaces remotos (/online/)
+  - =-p= nos descarga los elementos necesarios para mostrar propiamente todos los elementos de una web.
+  - =-m= de mirror. Nos descarga la web entera.
+- Por tanto, la web entera nos la podemos descargar con =wget -m -p -k "URL"= que es lo mismo que =wget -mpk "url"=.
+#+begin_example
+wget -mpk https://mpvd.es
+#+end_example
+- Con =--restrict-file-names\=windows= se aseguran nombres de archivo seguros, sin parámetros añadidos.
+- =--convert-links= convierte los enlaces en URLs relativas de tal manera que puede explorarse todo el sitio
+  en local.
+** wget - Bibliografía                                             :noexport:
+- https://www.lifewire.com/uses-of-command-wget-2201085
+# https://askubuntu.com/questions/391622/download-a-whole-website-with-wget-or-other-including-all-its-downloadable-con
+* Descarga de archivos con curl
+** =curl= - Descarga de archivos
+- =curl= es una herramienta para transferir datos de o hacia un servidor a través de uno de los protocolos soportados.
+- Soporta tanto =HTTP= como =HTTPS=.
+- Dado que la salida estándar del comando es la pantalla, para descargarnos un archivo podríamos dirigir esa salida a un archivo con el operador =>=.
+- También podemos usar la opción =-o= y ponerle un nombre al archivo.
+#+REVEAL: split:t
+- O utilizar la opción =-O= y no cambiar el nombre:
+#+BEGIN_EXAMPLE
+curl URL > ruta-archivo
+curl -o nombre-archivo URL
+curl -O URL
+#+END_EXAMPLE
+- Se pueden descargar varios archivos poniéndolos como
+#+BEGIN_EXAMPLE
+curl -O url1 -O url2 -O url3
+#+END_EXAMPLE
+
+- Probad con esta URL de alojamientos con más de 50 habitaciones:
+[[http://www.zaragoza.es/sede/servicio/alojamiento.csv?q=habitaciones=gt=50&sort=habitaciones%2520desc][http://www.zaragoza.es/sede/servicio/alojamiento.csv?q=habitaciones=gt=50&sort=habitaciones desc]]
+
+** curl - Reanudar descarga
+- Otras dos opciones interesantes son, la de =-C= para continuar una descarga que se paró
+- Y =-z= para descargar de nuevo un archivo si se ha modificado en una fecha dada
+#+BEGIN_EXAMPLE
+curl -z -21-dic-11
+#+END_EXAMPLE
+** curl: descargar una lista de archivos
+#+BEGIN_EXAMPLE
+https://datos.madrid.es/egob/catalogo/209548-148-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-151-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-149-censo-locales-historico.csv
+https://datos.madrid.es/egob/catalogo/209548-150-censo-locales-historico.csv
+
+xargs -n 1 curl -O < files.txt 
+#+END_EXAMPLE
+** curl: recursivo                                                 :noexport:
+*** De forma recursiva
+
+- Con la opción =-r= descarga un sitio de forma recursiva.
+- Crea los directorios tal como están:
+
+#+BEGIN_EXAMPLE
+wget -r url
+#+END_EXAMPLE
+
+*** De forma recursiva, a un solo archivo
+
+#+BEGIN_EXAMPLE
+wget -nd -r url
+#+END_EXAMPLE
+** curl: archivos de cierto tipo                                   :noexport:
+*** Todos los archivos de cierto tipo
+- Si queremos descargar todos los archivos =xlsx= que se encuentran en tal directorio de la =URL=:
+#+BEGIN_EXAMPLE
+wget -A "*.xlsx" -r url
+#+END_EXAMPLE
+
+*** Ignorar los archivos de cierto tipo
+- Si queremos descargar todos los archivos menos los de un tipo, como en este caso, =exe=:
+#+BEGIN_EXAMPLE
+wget -R "*.exe" -r
+#+END_EXAMPLE
+
+** Peticiones a una API desde curl
+*** Qué es una API
+ - [[https://es.wikipedia.org/wiki/Interfaz_de_programaci%25C3%25B3n_de_aplicaciones][API]] es el acrónimo de /Application Programming Interface/
+ - Es una declaración de cómo comunicarme con cierto software. En el caso que nos interesa nos comunicamos con las webs.
+ - De hecho, HTTP ya ofrece la base para la comunicación al modo API.
+ - Pero además hay webs con muchos datos --medios de comunicación, portales de datos, redes sociales, etc.-- que utilizan APIs para mediar esa comunicación.
+ - Este tipo de APIs se les conoce como [[https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional][API REST]]
+*** API REST
+ - /REST/ (/Representational State Transfer/, transferencia del estado representacional) nace en 2000 por Roy Fielding, uno de los autores de HTTP.
+ - Son un conjunto de métodos (restricciones) para crear aplicaciones web sobre /HTTP/.
+#+REVEAL: split:t
+ - De esta forma podemos obtener datos, indicar la ejecución de operaciones sobre los datos (en formatos /XML/ o /JSON/, fundamentalmente) con:
+   - /GET/, obtener, para recuperar un recurso.
+   - /POST/ se usa la mayoría de las veces para crear un nuevo recurso. También puede usarse para enviar datos a un recurso que ya existe para su procesamiento.
+   - /PUT/ es útil para crear o editar un recurso. En el cuerpo de la petición irá la representación completa del recurso.
+   - /DELETE/ se usa para eliminar un recurso.
+ - Sabiendo cómo funciona la API de alguien se pueden crear interfaces, aplicaciones (apps) o se pueden realizar consultas, que es lo que vamos a hacer.
+ - La mayoría de ellas requiere de registro para poder obtener unas claves conocidas como /API keys/ para poder hacer las peticiones, pero también hay APIs que no requieren registro.
+*** Consulta GET desde curl
+ - Para ir más rápido probaremos con una API que no requiere de registro como la del portal: https://api.covid19api.com/
+ - Suele ocurrir que la frecuencia de las peticiones sea limitada, incluso aunque requiera registro.
+ - Cada /API/ suele tener una página con la [[https://documenter.getpostman.com/view/10808728/SzS8rjbc][documentación de su API]] para ver cómo se construyen las peticiones a través de las [[https://es.wikipedia.org/wiki/Identificador_de_recursos_uniforme][URI]]s
+ - Los datos que devuelve tienen una estructura [[https://es.wikipedia.org/wiki/JSON][JSON]] (/JavaScript Object Notation/), un formato de datos escrito en formato /JS/ (/JavaScript/).
+ - Vamos a probar:
+  #+BEGIN_SRC
+ curl --location --request GET 'URI' > casosSpain.json
+  #+END_SRC
+ Donde /URI/ es: https://api.covid19api.com/dayone/country/spain/status/confirmed
+*** Ver código JSON
+ - Podemos probar a abrir con Firefox el archivo =json= para visualizar mejor estos resultados
+ - Existe la herramienta =jq= para visualizarlo en la terminal también. La podéis instalar con =brew= o =apt-cyg=.
+#+BEGIN_EXAMPLE
+cat archivo.json | jq
+#+END_EXAMPLE
+ - Si tenéis =Python= instalado se puede usar el comando =python -m json.tool casosSpain.json=. En este caso le decís a /Python/ que use la librería =json.tool= como un =script=
+* La web como fuente de datos
+** Inspección de la página
+- El inspector de la página es una herramienta que viene incorporada tanto en el navegador firefox como chrome.
+- Viene de la antigua extensión /firebug/ que servía para inspeccionar elementos de la página.
+- Nos permite examinar y modificar el html y css de una página.
+#+REVEAL: split:t
+- También podremos aplicar scripts sobre la página desde la consola. nos será útil para identificar elementos de la web rápidamente.
+- Para acceder tanto en firefox como chrome podemos llegar de varias maneras:
+  1) en windows: =crtl+shift+i=
+  2) en mac: =cmd+shift+i=
+  3) haz click derecho en un elemento de la página web y selecciona "inspeccionar elemento" o "inspeccionar"
+
+** Navegación
+*** Operadores avanzados de búsqueda
+ - Los motores de búsqueda nos pueden ayudar a encontrar la página web
+   a la que queremos llegar o la imagen que queremos, pero también nos
+   pueden servir como herramienta a través de sus operadores avanzados
+   para filtrar, refinar y llegar a resultados diferentes
+*** Google
+ - Hay una opción de [[https://www.google.com/advanced_search][interfaz gráfica]].
+ - Si realizamos varias búsquedas es posible que nos pida resolver /captcha/.
+ - En [[https://github.com/flowsta/scraping#orgheadline23][este repositorio]] podéis encontrar la mayoría de operadores de búsqueda
+ #+REVEAL: split:t
+ - Para esta sesión vamos a repasar algunas expresiones útiles desde el propio buscador de [[https://www.google.com/][google]]:
+   - El operador =site:= busca sobre un sitio. Por ejemplo, =Filomena site:elmundo.es= dará resultados sobre la búsqueda "Filomena" dentro de la página [[https://www.elmundo.es][elmundo.es]]
+   - Operador =filetype= para tipo de archivo, por ejemplo, =filetype:pdf site:www.congreso.es presupuestos= busca archivos pdf sobre presupuestos en la página del congreso.
+   - para una búsqueda literal utilizamos comillas dobles. por ejemplo, =site:elpais.com "ley de transparencia"=
+   - el operador menos elegimos las palabras que no queremos que vengan acompañadas de otras. por ejemplo, =site:eldiario.es ley -transparencia=
+*** Duckduckgo 
+ - También podemos utilizar otros motores de búsqueda como [[https://duckduckgo.com/][duckduckgo]] con operadores de búsqueda similares a los de google
+ - Aquí podemos repasar su [[https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/][lista de operadores]]. 
+ - Existe una serie de operadores predefinidos para páginas de terceros o que funcionan como aplicaciónes. se llaman [[https://duck.co/ia][instant answers]].
+
+* Web Scrapping con Python
+** Qué es python?
+ - Python es un lenguaje de programación de código abierto y multiplataforma
+ - Es un lenguaje interpretado, es decir, no tenemos que compilarlo, lo cual nos ahorra mucho tiempo de desarrollo
+#+REVEAL: split:t
+ - Podemos instalar librerías dependiendo del propósito. Para esta sesión utilizaremos las siguientes:
+   - *Request*: es una librería para descargar contenidos web como hacemos con =curl= o =wget=.
+   - *Beautiful Soup* (BS) es una librería para seleccionar el HTML de la web que descargamos como hacíamos con =XPath=. Su versión mantenida es la 4
+   - *Selenium*: esta librería nos permite ejecutar acciones de navegación en un navegador para extraer contenidos que no cargan en la página hasta que se produce una acción, como puede ser el /scroll/ o la navegación por un listado.
+ - Con estas tres librerías podemos descargarnos todo lo que queramos de una página web.
+   
+** Intro a Python
+- En nuestro caso trabajaremos con /python3/ que es la versión principal de desarrollo e incluye mejoras respecto a /python2/, versión que se encuentra sin soporte.
+- Para iniciar =python= lo podemos hacer desde la terminal con =python= o =python3=, depende de nuestro =PATH=.
+#+REVEAL: split:t
+- Así entramos en la consola/terminal/intérprete de órdenes/comandos de =python=.
+#+ATTR_HTML: :width 80% :align center
+file:img/python3.png
+- Podemos salir del intérpetre de python con la función =exit()= y enter.
+#+REVEAL: split:t
+- El interprete funciona de manera similar al =shell= de =unix= como hemos venido utilizándolo, lee y ejecuta comandos de forma interactiva
+- Podemos revisar el historial con tecla arriba o =^P=
+- Cuando se le llama con un argumento de nombre de archivo o con un archivo como entrada estándar, lee y ejecuta un script desde ese archivo:
+#+BEGIN_EXAMPLE
+echo 'print("¡Hola, mundo!")' > hola.py
+python3 hola.py
+¡Hola, mundo!
+#+END_EXAMPLE
+#+REVEAL: split:t
+- Recomendamos un recorrido por los siguientes apartados de la documentación de Python3
+  - [[https://docs.python.org/es/3.6/tutorial/introduction.html#using-python-as-a-calculator][Python como calculadora]]
+  - [[https://docs.python.org/es/3.6/tutorial/introduction.html#strings][Cadena de caracteres]]
+  - [[https://docs.python.org/es/3.6/tutorial/introduction.html#lists][Listas]]
+- Se puede continuar la guía para profundizar más, pero es importante tener claros los conceptos que hemos listado
+** Preparando python para escrapear
+- Lo primero que vamos a hacer es instalar las librerías o módulos para esta práctica
+- Utilizaremos un módulo llamado =pip= que viene por defecto al instalar =python3=.
+- Para instalar el módulo =requests= escribimos lo siguiente en la terminal
+#+BEGIN_EXAMPLE
+python -m pip install requests
+#+END_EXAMPLE
+- En vez de =python= puede que necesites poner =python3=.
+#+REVEAL: split:t
+- Repetimos lo mismo para =beautifulsoup4=.
+- Nótese que podemos poner más de una librería en la línea de instalación:
+#+BEGIN_EXAMPLE
+python -m pip install beautifulsoup4 selenium
+#+END_EXAMPLE
+** Bibliografía
+- https://www.freecodecamp.org/learn/responsive-web-design/
+- https://www.freecodecamp.org/learn/scientific-computing-with-python/
+- https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+- https://programminghistorian.org/en/lessons/intro-to-beautiful-soup

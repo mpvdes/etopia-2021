@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>3.2 Limpieza de Datos</title>
+<meta name="author" content="(Julián Pérez y Adolfo Antón)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="modifications.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">3.2 Limpieza de Datos</h1>
+</section>
+<section id="table-of-contents"><div id="table-of-contents">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orge8b1e4b">Open Refine</a></li>
+<li><a href="#/slide-org10b8890">Primeros pasos</a></li>
+<li><a href="#/slide-orgdfa905f">Records y rows, registros y filas</a></li>
+<li><a href="#/slide-org29a5f76">Facetas</a></li>
+<li><a href="#/slide-orga30874b">Transformar datos</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-orge8b1e4b">
+<h2 id="orge8b1e4b">Open Refine</h2>
+<div class="outline-text-2" id="text-orge8b1e4b">
+</div>
+</section>
+<section id="slide-org18c0855">
+<h3 id="org18c0855">La navaja suiza del periodismo de datos</h3>
+<ul>
+<li><a href="http://openrefine.org/download.html">Open Refine</a> antes <i>Google Refine</i></li>
+<li>Nos permite explorar de una forma muy sencilla grandes archivos de datos</li>
+<li>También, realizar transformaciones de datos o incluso de formatos.</li>
+
+</ul>
+
+</section>
+<section id="slide-org984bf4f">
+<h3 id="org984bf4f">Descarga de Open Refine:</h3>
+<ul>
+<li><a href="http://openrefine.org/download.html">Descarga Open Refine</a></li>
+<li>Se trata de una aplicación que se ejecuta en el ordenador.</li>
+<li>No requiere de servicios externos salvo algunas extensiones.</li>
+<li>Open Refine se conecta con la máquina virtual de Java</li>
+
+</ul>
+
+</section>
+<section id="slide-orgd6bac71">
+<h3 id="orgd6bac71">Manual de Open Refine:</h3>
+<ul>
+<li>Echar un vistazo a <a href="https://github.com/flowsta/refine">apuntes sobre Refine</a> de Adolfo</li>
+<li>Herramienta creada por <i>Google</i> para el manejo de bases de datos.</li>
+<li>Permite limpiar bases de datos, exportarlas en diferentes formatos, y arreglar y manejar las bases para un mejor uso.</li>
+<li>El proyecto lo abandonó <i>Google</i> y lo acogió la comunidad de periodismo de datos.</li>
+<li>Se trata de un <a href="https://github.com/OpenRefine">proyecto abierto</a> con licencia <i>BSD</i></li>
+<li>Aunque el proyecto se llama <i>OpenRefine</i>, nos referiremos a él como <i>Refine</i></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org10b8890">
+<h2 id="org10b8890">Primeros pasos</h2>
+<div class="outline-text-2" id="text-org10b8890">
+</div>
+</section>
+<section id="slide-org61e78b6">
+<h3 id="org61e78b6">Aplicación web</h3>
+<ul>
+<li><i>Refine</i> es una aplicación web cliente-servidor.</li>
+<li>Cuando lanzamos <i>Refine</i>, estamos activando el servidor.</li>
+<li>A la vez, se abre el navegador con una pestaña que apunta a la dirección <code>127.0.0.1:3333</code>.</li>
+<li>El navegador actúa como cliente de <i>Refine</i>.</li>
+<li>No necesita conexión a Internet para funcionar.</li>
+<li><code>127.0.0.1</code> es la dirección del <i>locahost</i>, el equipo local, el ordenador donde trabajamos.</li>
+<li><code>3333</code> es el puerto que utiliza la aplicación</li>
+
+</ul>
+
+</section>
+<section id="slide-orgad8c46f">
+<h3 id="orgad8c46f">Menú de inicio</h3>
+<ul>
+<li>Dado que la opción estable y en desarrollo es en inglés, seguiremos los menús en este idioma aunque lo traduciremos al castellano/español.</li>
+<li>Cuando se abre <i>Refine</i>, en la columna de la izquierda hay cuatro opciones:
+<ul>
+<li><i>Create project</i> o crear proyecto.</li>
+<li><i>Open Project</i> o abrir proyecto.</li>
+<li><i>Import Project</i> o importar proyecto.</li>
+<li><i>Language Settings</i> o configuración de idioma.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgb35eae6">
+<h4 id="orgb35eae6">Importar proyecto</h4>
+<ul>
+<li><i>Import Project</i> carga un proyecto de <i>Refine</i>.</li>
+<li>Puedes importar un proyecto, si:
+<ul>
+<li>Has trabajado en algún proyecto y lo has exportado.</li>
+<li>Alguien te ha pasado un proyecto.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org97836f8">
+<h3 id="org97836f8">Create project</h3>
+<ul>
+<li>Para crear un proyecto, necesitamos que <i>Refine</i> tenga algunos datos.</li>
+<li>Podemos importar datos de algún archivo <i>TSV</i>, <i>CSV</i>, <i>*SV</i>, <i>Excel</i> (.xls y .xlsx), <i>JSON</i>, <i>XML</i>, <i>RDF como XML</i> y datos de documentos de <i>Google Drive</i>.</li>
+<li>Otros formatos también se soportan a través de algunas extensiones (<i>ver extensiones</i>)</li>
+<li>Lo más habitual es subir un archivo de datos que tengamos en nuestra carpeta de <i>datasets</i>.</li>
+
+</ul>
+</section>
+<section id="slide-org97836f8-split">
+
+<h3>Create project</h3>
+<ul>
+<li>Se pueden cargar datos desde una dirección <i>URL</i> que contenga un archivo de datos con alguna de las extensiones anteriores.</li>
+<li>Si disponemos de unos datos en el portapapeles, también se pueden cargar desde aquí <i>from clipboard</i>.</li>
+
+</ul>
+</section>
+<section id="slide-orge25c1f9">
+<h4 id="orge25c1f9">importante:</h4>
+<ul>
+<li>En <code>Project name</code> no escribir caracteres no <i>ASCII</i> ni mayúsculas ni espacios en blanco.</li>
+<li>Echar un vistazo a los datos y elegir el <code>Character encoding</code> apropiado. Normalmente, <code>UTF-8</code> valdrá pero puede que el texto esté codificado en otro conjunto de caracteres.</li>
+<li>En caso de subir un <i>CSV</i>, elegir el separador adecuado.</li>
+
+</ul>
+
+</section>
+<section id="slide-org37f565b">
+<h3 id="org37f565b">Open Proyect</h3>
+<ul>
+<li>La próxima vez que abramos <i>Refine</i> ya tendremos un proyecto al menos creado.</li>
+<li><i>Refine</i> guarda todos los proyectos con los que trabajes en el equipo.</li>
+<li>No hace falta que guardes durante el proceso de análisis o limpieza de datos, aunque copias extra siempre son recomendables.</li>
+<li>Puedes exportar el proyecto por si quieres tener una copia más del mismo (<i>ver más adelante cómo</i>).</li>
+
+</ul>
+</section>
+<section id="slide-org37f565b-split">
+
+<h3>Open Proyect</h3>
+<ul>
+<li>En la opción de <i>Abrir Proyecto</i> se muestran estos datos, siempre que no sea la primera vez que abres el programa:
+<ul>
+<li>Una <code>x</code> por si quieres borrarlo.</li>
+<li>Un <code>rename</code> o <code>renombrar</code> para renombrarlo.</li>
+<li>La última fecha de modificación, <i>last modified</i> o <i>Última modificación</i>.</li>
+<li>El <i>nombre</i> del proyecto o <i>name</i>.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgdfa905f">
+<h2 id="orgdfa905f">Records y rows, registros y filas</h2>
+<div class="outline-text-2" id="text-orgdfa905f">
+</div>
+</section>
+<section id="slide-org5c27def">
+<h3 id="org5c27def">Registros y filas</h3>
+<ul>
+<li><i>Refine</i> distingue entre registros <i>Records</i> y filas o <i>Rows</i> y permite trabajar de una u otra manera.</li>
+<li>Una fila o <i>row</i> es una línea de datos. El número total de filas se indica en la parte superior de la página, <code>N rows</code></li>
+<li>Un registro o <i>record</i> es una combinación de una o muchas filas que se identifican por un objeto único y compartido en función de los datos de la primera columna.</li>
+<li>Es decir, si en la primera columna de datos &#x2013;no en la columna <i>All</i> o <i>Todo</i>&#x2013; hay datos en algunas filas y en la segunda columna hay datos que se refieren a la primera.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf8cbf0d">
+<h3 id="orgf8cbf0d">Cómo usar registros</h3>
+<ul>
+<li>Primero hay que identificar la columna que contiene el marcador de registros, una cuyas celdas se repitan.</li>
+<li>Para ver esto, podemos utilizar una faceta de texto sobre la columna desde el menú de <code>columna &gt; facetas</code>.</li>
+<li>Movemos esa columna al principio desde el menú de <code>columna &gt; editar columna &gt; mover columna al principio</code>.</li>
+<li>Ordenamos la columna desde el menú de la <code>columna &gt; Ordenar (/sort/)</code>.</li>
+
+</ul>
+</section>
+<section id="slide-orgf8cbf0d-split">
+
+<h3>Cómo usar registros</h3>
+<ul>
+<li>Desde el menú de ordenar que sale en la parte gris de los <code>menús de arriba &gt; reordenar filas permanentemente o /reorder rows permanently/</code></li>
+<li>Desde la misma columna, opción <code>Editar celdas &gt; vaciar hacia abajo o /blank down/</code></li>
+<li>Finalmente, mostramos como registros o <i>records</i>.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org29a5f76">
+<h2 id="org29a5f76">Facetas</h2>
+<div class="outline-text-2" id="text-org29a5f76">
+</div>
+</section>
+<section id="slide-orga347e0a">
+<h3 id="orga347e0a">Facetas o <i>facets</i></h3>
+<ul>
+<li>Las facetas o <i>facets</i> se utilizan para filtrar el contenido, para explorar, ver o encontrar valores erróneos o que se salgan de la</li>
+
+</ul>
+<p>
+norma, mostrar distintas caras de los datos.
+</p>
+<ul>
+<li>Se pueden anidar y se puede modificar el orden de anidación para obtener distintos resultados.</li>
+
+</ul>
+</section>
+<section id="slide-orga347e0a-split">
+
+<h3>Facetas o <i>facets</i></h3>
+<ul>
+<li>Sobre la columna, con la opción <code>Facet</code> podemos hacer:
+<ul>
+<li><code>Text facet</code>, faceta de texto, nos agrupa los datos de las celdas si son iguales.</li>
+<li><code>Numeric facet</code>, si se trata de datos numéricos.</li>
+<li><code>Timeline facet</code>, si se trata de datos que reconoce como fechas.</li>
+<li><code>Scatterplot facet</code>, si se trata de datos numéricos, para hacer gráficos de dispersióm donde encontrar patrones, tendencias o   <i>outliers</i> (valores extremos, extraños).</li>
+<li><code>Text filter</code>, escribimos los valores que queremos encontrar.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org5091554">
+<h4 id="org5091554">Atención</h4>
+<ul>
+<li>En principio todos los datos, a no ser que se lo hayamos dicho al cargarlo o lo hayamos editado, se considera texto</li>
+<li>Si queremos trabajar con <i>numeric</i>, <i>timeline</i> o <i>scatterplot</i>, hemos de parsear esos datos.</li>
+
+</ul>
+
+</section>
+<section id="slide-org859678e">
+<h3 id="org859678e"><code>Custom text facet</code></h3>
+<ul>
+<li>Para encontrar determinados valores, pincha en <code>facet</code> y luego en <code>custom text facet</code>.</li>
+<li>Introducimos lo que queremos buscar.</li>
+<li>Pincha en <code>count</code> para ver el número de repeticiones.</li>
+
+</ul>
+<p>
+<code>value.contains"patrón"</code>
+</p>
+<ul>
+<li>Se pueden anidar:</li>
+
+</ul>
+<p>
+<code>value.contains("patrón1")+value.contains("patrón2")</code>
+</p>
+
+</section>
+<section id="slide-orgbf41c8c">
+<h3 id="orgbf41c8c">Búsqueda de valores duplicados</h3>
+<ul>
+<li>Se pueden encontrar valores duplicados a través de las facetas:</li>
+<li><code>Facet &gt; Customized facets &gt; Duplicates facet</code></li>
+<li>Se pueden ver las partes que se repiten de los valores de una columna.</li>
+<li><code>Facet &gt; Customized facets &gt; Word facet</code></li>
+<li>Ver todos los valores de una columna:</li>
+<li><code>Facet &gt; Text facet</code></li>
+<li>Ver (y cambiar o agrupar) variantes similares de valores:</li>
+<li><code>edit cells &gt; cluster and edit</code></li>
+
+</ul>
+
+</section>
+<section id="slide-org77ba775">
+<h3 id="org77ba775">Borrar celdas vacías de una columna</h3>
+<p>
+A veces hay registros que producen celdas que no son necesarias. - Para eliminar los registros del <i>dataset</i>:
+</p>
+
+<pre class="example">
+Facet &gt; Customized facets &gt; Facet by blank y clic en ‘true’
+</pre>
+
+</section>
+<section id="slide-orgfc6e020">
+<h3 id="orgfc6e020">Celdas vacías</h3>
+<p>
+Situar las celdas vacías al final
+</p>
+
+<pre class="example">
+Edit cells &gt; Blank down
+</pre>
+
+<ul>
+<li>Filtramos para mostrar solo los valores vacíos <code>Facet &gt; Customized facets &gt; Facet by blank</code> y pinchamos en <code>true</code></li>
+<li>Podemos eliminar, ver punto siguiente.</li>
+<li>Se pueden explorar los datos con gráficos de dispersión.</li>
+
+</ul>
+</section>
+<section id="slide-orgfc6e020-split">
+
+<h3>Celdas vacías</h3>
+<ul>
+<li>En la columna que nos interese: <code>Facet &gt; Scatterplot facet</code>, pincha en <code>log</code> para verlo mejor. Se muestran las relaciones entre todos los valores numéricos en cada una de las columnas.</li>
+<li>Pincha en en uno de los gráficos para filtrar/mostrar esos registros.</li>
+<li>Pincha y arrastra sobre el gráfico de la izqda. para seleccionar un grupo de registros y mostrarlos.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga30874b">
+<h2 id="orga30874b">Transformar datos</h2>
+<div class="outline-text-2" id="text-orga30874b">
+</div>
+</section>
+<section id="slide-org13bdb69">
+<h3 id="org13bdb69">Transformación de datos</h3>
+<ul>
+<li>Tras aplicar 1 o más filtros en el panel izquierdo podemos editar lo que interese.</li>
+<li>Cambiar conjunto de valores tras filtrar por nombre: renombrar, renombrar uno para que se fusione con otro, agrupar, etc.</li>
+<li>También podemos hacerlo en cualquier celda de la dcha (datos filtrados) y aplicar los cambios a todas las instancias o celdas similares.</li>
+
+</ul>
+
+</section>
+<section id="slide-org97995db">
+<h3 id="org97995db">Transformar a numérico</h3>
+<p>
+Si queremos pasar millón a números, escribiremos:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>toNumber(value.replace(" millón", ""))*1000000
+</code></pre>
+</div>
+
+<p>
+Con <code>value.replace</code> reemplazamos el valor <code>millón</code> y lo sustituimos por la multiplicación del valor.
+</p>
+
+</section>
+<section id="slide-orgd5882c0">
+<h3 id="orgd5882c0">Transformaciones</h3>
+<p>
+De forma genérica, se realizan con:
+</p>
+
+<pre class="example">
+Edit cells &gt; transform
+</pre>
+
+</section>
+<section id="slide-org0e3b1de">
+<h3 id="org0e3b1de">Eliminar caracteres</h3>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.unescape(‘url’)
+</code></pre>
+</div>
+
+<p>
+Elimina los caracteres raros de una <i>URL</i>
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.replace("+","")
+</code></pre>
+</div>
+
+<p>
+Elimina el signo <code>+</code>, lo reemplaza por nada.
+</p>
+
+</section>
+<section id="slide-orgb9a144a">
+<h3 id="orgb9a144a">Obtener URL</h3>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>‘http://’+ cells[‘nombre_columna’].value +’.com’
+</code></pre>
+</div>
+
+<p>
+Obtiene la <i>URL</i> <a href="http://valor.com">http://valor.com</a>
+</p>
+
+</section>
+<section id="slide-orgd8b9cb8">
+<h3 id="orgd8b9cb8">Añadir y borrar a la vez</h3>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>‘Avenida ’+value.replace(‘AV.’,’’)
+</code></pre>
+</div>
+
+<p>
+Añadimos <code>Avenida</code> al mismo tiempo que eliminamos <code>AV</code>
+</p>
+
+</section>
+<section id="slide-org083136b">
+<h3 id="org083136b">Uso de regexp</h3>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>replace(value, /\d/,"")
+
+</code></pre>
+</div>
+<p>
+Elimina la parte numérica de las celdas.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.replace(regex, “”)
+</code></pre>
+</div>
+
+<p>
+En general, usamos cualquier tipo de expresiones regulares
+</p>
+
+</section>
+<section id="slide-orgcbc1b50">
+<h3 id="orgcbc1b50">Eliminar espacios en blanco</h3>
+<pre class="example">
+Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace
+</pre>
+
+<p>
+Elimina espacios blancos del inicio y final de los valores
+</p>
+
+</section>
+<section id="slide-orgc0ede48">
+<h3 id="orgc0ede48">Eliminar registros seleccionados</h3>
+<pre class="example">
+All &gt; Edit rows &gt; Remove all matching rows
+</pre>
+
+</section>
+<section id="slide-org22cd703">
+<h3 id="org22cd703">Clustering</h3>
+<p>
+Agrupaciones basada en similitudes. En el panel de la izqda., en filtro, aparece el botón de <i>cluster</i> donde se abre una ventana que podemos fusionar o <i>merge</i> los diferentes grupos escribiendo en todos el mismo nombre como <i>nuevo valor de celda</i>. También podemos hacerlo con:
+</p>
+
+<pre class="example">
+edit cells &gt; cluster and edit
+</pre>
+
+<p>
+Si no obtenemos los resultados esperados, podemos repetir el proceso para todos los algoritmos cambiando el <i>método</i>, la <i>función</i> y el <i>radius</i>
+</p>
+
+</section>
+<section id="slide-org9c81911">
+<h3 id="org9c81911">Limpiar valores de columna numérica</h3>
+<p>
+Para limpiar valores de columna numérica, hacemos una faceta numérica
+</p>
+
+<pre class="example">
+Facet &gt; numeric facet
+</pre>
+
+<p>
+A la izqda. seleccionamos solo el tipo <i>non-numeric</i> para transformar estos datos. Si vemos que, erróneamente, los valores están muy dispersos, tenemos varias opciones:
+</p>
+
+<p>
+Usar escala logarítmica para corregir. Pinchamos en <code>Change</code> (<i>submenú izq</i>) y escribimos:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.log()
+</code></pre>
+</div>
+
+<p>
+Aceptamos, si la previsualización es correcta.
+</p>
+</section>
+<section id="slide-org9c81911-split">
+
+<h3>Limpiar valores de columna numérica</h3>
+<p>
+Arrastramos los extremos del gráfico para visualizar el subconjunto de datos más dispersos sobre los que hacer las transformaciones necesarias con <code>edit cells &gt; transform</code>:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.replace(",",".")
+</code></pre>
+</div>
+
+<p>
+Convertir en valores numéricos:
+</p>
+
+<pre class="example">
+Edit cells &gt; common transforms &gt; to number
+</pre>
+
+</section>
+<section id="slide-org183862f">
+<h3 id="org183862f">Limpiar fechas</h3>
+<p>
+Primero convertimos valores de columna a texto para evitar q haya números:
+</p>
+
+<pre class="example">
+Edit cells -&gt; Common transformations -&gt; To text
+</pre>
+
+<p>
+Luego convertir valores a fecha:
+</p>
+
+<pre class="example">
+Edit cells -&gt; Common transformations -&gt; To date
+</pre>
+
+<p>
+A continuación mostramos patrones de fecha
+</p>
+
+<pre class="example">
+Facet -&gt; Timeline facet
+</pre>
+
+<p>
+Seleccionamos sólo los valores <code>non-time</code> para transformar sólo éstos y extraemos  sólo el año mediante una expresión regular:
+</p>
+
+<pre class="example">
+Edit cells -&gt; Transform
+</pre>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<p>
+Entonces, escribimos:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.match(/.*(d{4}).*/)[0]
+</code></pre>
+</div>
+
+<p>
+Donde:
+</p>
+<ul>
+<li>Dentro de la función <code>()</code>, las barras <code>//</code> indican que se trata de una expresión regular.</li>
+<li><code>.*</code> significa que se trata de una secuencia de cero o más caracteres (letras, números, símbolos, etc.). Es el comodín para cualquier tipo de carácter.</li>
+<li><code>d</code> indica que estamos buscando dígitos.</li>
+<li><code>{4}</code> muestra que queremos encontrar cuatro dígitos.</li>
+
+</ul>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<ul>
+<li>La función <code>value.match</code> devuelve una matriz o <i>array</i> de resultados, de manera que usamos <code>[0]</code> para recuperar sólo la primera coincidencia (en las matrices o <i>arrays</i>, el primer valor es el 0).</li>
+
+</ul>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<p>
+Convertimos estos valores extraidos a fechas con:
+</p>
+
+<pre class="example">
+Edit cells -&gt; Common transformations -&gt; To date
+</pre>
+
+<p>
+Si hay fechas con varios formatos, utilizamos:
+</p>
+
+<pre class="example">
+Edit cells -&gt; Transform
+</pre>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<p>
+Y así extraemos el valor que nos interesa con la función <code>toString</code>, de tal modo que:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toString('yyyy')
+</code></pre>
+</div>
+
+<p>
+Obtiene el año, 2013.
+</p>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toString('M')
+</code></pre>
+</div>
+
+<p>
+Obtiene el dígito del mes, es decir, el <code>1</code> de enero.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toString('MM')
+</code></pre>
+</div>
+
+<p>
+Obtenemos dos dígitos del mes, es decir, <code>01</code> de enero.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toString('MMM')
+</code></pre>
+</div>
+
+<p>
+Obtenemos tres caracteres del mes, es decir, <code>Ene</code> de enero.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toString('MMMM')
+</code></pre>
+</div>
+
+<p>
+Obtenemos los caracteres del mes completo, es decir, <code>Enero</code> de enero.
+</p>
+</section>
+<section id="slide-org183862f-split">
+
+<h3>Limpiar fechas</h3>
+<p>
+Podemos concatenar las funciones <code>toDate</code> y <code>toString</code> para modificar el formato en una sola línea:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.toDate(‘MM/yy’,’MMM-yy’).toString(‘yyyy-MM’)
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org696747a">
+<h3 id="org696747a">Partir/Unir columnas</h3>
+<p>
+Separar en distintas columnas:
+</p>
+
+<pre class="example">
+Edit column &gt; split into several columns
+</pre>
+
+<p>
+Se pone el separador y el número de columnas. Funciona de izqda. a dcha. Después se puede renombrar la nueva columna con:
+</p>
+
+<pre class="example">
+Edit Column -&gt; Rename this column
+</pre>
+
+</section>
+<section id="slide-orge7908e5">
+<h3 id="orge7908e5">Añadir nuevas columnas</h3>
+<p>
+Añadimos una nueva columna basada en otra columna:
+</p>
+
+<pre class="example">
+edit column&gt;add column based on this column
+</pre>
+
+<p>
+Ponemos un nombre a la nueva columna y escribimos:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>cells("nombre-una-columna").value+""+cells("nombre-otra-columna").value
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org0e51df3">
+<h3 id="org0e51df3">Jugando con <code>value</code></h3>
+<p>
+Si escribimos:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>not(value.startsWith("-"))
+</code></pre>
+</div>
+
+<p>
+Si queremos que extraiga los valores 2-5:
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value[1,5]
+</code></pre>
+</div>
+
+<p>
+Si queremos extraer a partir del séptimo carácter:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.substring(6)
+</code></pre>
+</div>
+
+<p>
+Para crear nueva columna con el nº de repeticiones de la palabra "hola":
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>value.facetCount("value", "hola")
+</code></pre>
+</div>
+</section>
+<section id="slide-org0e51df3-split">
+
+<h3>Jugando con <code>value</code></h3>
+<p>
+Una nueva columna con el resultado de la división de dos valores:
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-grel"   ><code trim>cells[“A”].value / cells[“C”].value
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes]
+});
+
+</script>
+</body>
+</html>

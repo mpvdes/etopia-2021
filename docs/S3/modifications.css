@@ -1,0 +1,14 @@
+.reveal ul,p,pre {
+    font-size: 0.8em;
+    }
+.reveal ul{
+    line-height: 1.5;
+}
+
+.reveal code{
+    color: Lawngreen;
+}
+
+.reveal b {
+   color:#cdd7d7;
+}
