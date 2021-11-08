@@ -45,7 +45,8 @@ Un repositorio con los contenidos del curso
 *** Repaso
 *** Mario Pérez-Montoro
 Presentación en [[file://src/pdf/mpm-sesion-i.pdf][PDF]]
-
+*** Julián Pérez
+Recolección de datos [[https://mpvdes.github.io/etopia-2021/S31][Slides]]
 *** Github
 **** Datos
 - Organización: https://github.com/org/mpvdes
@@ -65,6 +66,8 @@ Presentación en [[file://src/pdf/mpm-sesion-i.pdf][PDF]]
 
 - enchroma
 - Tinta-dato y tinta-no-dato
+*** Julián Pérez
+Limpieza de datos [[https://mpvdes.github.io/etopia-2021/S32.html][Slides]]
 *** DONE Repasar Github
 *** DONE Repositorio Github propio
 *** Configuración nano
