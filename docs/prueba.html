@@ -1,0 +1,378 @@
+<h1 id="curso-de-visualización-de-datos-urbanos-etopia-2021">Curso de Visualización de Datos Urbanos Etopia 2021</h1>
+<p>Un repositorio con los contenidos del curso</p>
+<ol>
+<li>Introducción y organización del curso</li>
+<li>Herramientas</li>
+<li>Limpieza de datos</li>
+<li>Análisis de datos</li>
+<li>Visualización de datos</li>
+<li>Puesta en común de los proyectos y cierre del curso</li>
+</ol>
+<h1 id="sesiones">Sesiones</h1>
+<h2 id="sesión-1.-2210">Sesión 1. 22/10</h2>
+<ol>
+<li>Presentación del curso, quiénes somos, etc.</li>
+<li>Presentación de las personas participantes</li>
+<li>Qué pretendemos con el taller</li>
+<li>Un par de ejemplos: Ciudad Desigual y Territorio de Datos
+<ol>
+<li>Ciudad Desigual: <a href="https://jllopc.github.io/ciudad.desigual/">https://jllopc.github.io/ciudad.desigual/</a></li>
+<li>Territorio de datos: <a href="https://territoriodedatos.org">https://territoriodedatos.org</a></li>
+</ol></li>
+<li>Debate entre historiadores y sociólogos, Ignacio Azcona</li>
+<li>La línea de comandos
+<ul>
+<li>Cygwin y apt-cyg</li>
+<li>Brew</li>
+<li>WSL</li>
+</ul></li>
+</ol>
+<h2 id="sesión-2.-2310">Sesión 2. 23/10</h2>
+<ol>
+<li>Charla de experiencias artísticas con la ciudad, Julián Pérez (ver <a href="file://src/pdf/slides-Julian.pdf">PDF</a>)</li>
+<li>Configuración de la línea de comandos</li>
+<li>Creación de grupo de Telegram</li>
+<li>Creación de organización de Github</li>
+<li>Herramientas de línea de comandos</li>
+</ol>
+<h2 id="sesión-3.-2910-viernes">Sesión 3. 29/10 Viernes</h2>
+<h3 id="repaso">Repaso</h3>
+<h3 id="mario-pérez-montoro">Mario Pérez-Montoro</h3>
+<p>Presentación en <a href="file://src/pdf/mpm-sesion-i.pdf">PDF</a></p>
+<h3 id="julián-pérez">Julián Pérez</h3>
+<p>Recolección de datos <a href="https://mpvdes.github.io/etopia-2021/S31">Slides</a></p>
+<h3 id="github">Github</h3>
+<ol>
+<li><p>Datos</p>
+<ul>
+<li>Organización: <a href="https://github.com/org/mpvdes">https://github.com/org/mpvdes</a></li>
+<li>Equipo: <a href="https://github.com/org/mpvdes/etopia">https://github.com/org/mpvdes/etopia</a></li>
+<li>Repositorio: <a href="https://github.com/mpvdes/etopia-2021">https://github.com/mpvdes/etopia-2021</a></li>
+</ul></li>
+<li><p>Ayuda</p>
+<ul>
+<li>Manual de Adolfo Antón Bravo: repositorio en github <a href="https://github.com/flowsta/github">https://github.com/flowsta/github</a> y web <a href="http://flowsta.github.io/github/">http://flowsta.github.io/github/</a></li>
+<li>Web oficial, <a href="https://git-scm.com/">https://git-scm.com/</a></li>
+</ul></li>
+<li><p>Clonado y actualización del repositorio</p></li>
+</ol>
+<h2 id="sesión-4.-3010-sábado">Sesión 4. 30/10, Sábado</h2>
+<h3 id="mario-pérez-montoro-1">Mario Pérez-Montoro</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Atributo</th>
+<th>Cuali</th>
+<th>Cuanti</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>enchroma</li>
+<li>Tinta-dato y tinta-no-dato</li>
+</ul>
+<h3 id="julián-pérez-1">Julián Pérez</h3>
+<p>Limpieza de datos <a href="https://mpvdes.github.io/etopia-2021/S32.html">Slides</a></p>
+<h3 id="done-repasar-github">DONE Repasar Github</h3>
+<h3 id="done-repositorio-github-propio">DONE Repositorio Github propio</h3>
+<h3 id="configuración-nano">Configuración nano</h3>
+<h3 id="vídeo-aparcamientos-en-ee.uu.">Vídeo: aparcamientos en EE.UU.</h3>
+<h3 id="vídeo-casas-en-ee.uu">Vídeo: casas en EE.UU</h3>
+<h2 id="sesión-5.-511">Sesión 5. 5/11</h2>
+<h3 id="comunicación-visual-con-tablas">Comunicación visual con tablas</h3>
+<h3 id="google-spreadsheet">Google Spreadsheet</h3>
+<ol>
+<li><p>ImportURL</p>
+<pre class="example"><code>IMPORTHTML(&quot;url&quot;; &quot;consulta&quot;; índice)
+</code></pre></li>
+<li><p>ImportXML</p>
+<pre class="example"><code>=IMPORTXML(&quot;url&quot;;&quot;xpath&quot;)
+</code></pre>
+<p>Otras opciones:</p>
+<ul>
+<li><code>count(//div[@class</code>'']//a/<span class="citation" data-cites="href">@href</span>)=</li>
+<li><code>//img/@alt</code></li>
+<li><code>//a[contains('Escuela')]/@href</code></li>
+</ul></li>
+<li><p>ImportFeed</p>
+<pre class="example"><code>=importfeed(&quot;url&quot;;&quot;items url&quot;;VERDADERO;250)
+</code></pre>
+<p>url: <a href="http://www.ft.com/rss/home/europe">http://www.ft.com/rss/home/europe</a></p>
+<pre class="example"><code>=importfeed(B2;&quot;items url&quot;;VERDADERO;250)
+</code></pre></li>
+</ol>
+<h3 id="open-refine">Open Refine</h3>
+<ul>
+<li><a href="https://openrefine.org/">https://openrefine.org/</a></li>
+</ul>
+<ul>
+<li>"A free, open source, powerful tool for working with messy data"</li>
+<li>La navaja suiza de la limpieza de datos.</li>
+<li>En la versión 3.4.1, en la versión para Windows, está la opción de descargarlo con <a href="https://adoptopenjdk.net/about.html">OpenJDK</a> incluido.</li>
+</ul>
+<h3 id="python">Python</h3>
+<ol>
+<li><p>csvkit</p>
+<p>Instalación:</p>
+<pre class="example"><code>pip install csvkit
+</code></pre></li>
+<li><p>Scikit learn</p>
+<p><a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></p></li>
+<li><p>Jupyter</p>
+<p>Instalamos:</p>
+<pre class="example"><code>pip install jupyter
+</code></pre>
+<p>Lanzamos:</p>
+<pre class="example"><code>jupyter notebook
+</code></pre></li>
+</ol>
+<h2 id="sesión-6.-611">Sesión 6. 6/11</h2>
+<h2 id="sesión-7.-1211">Sesión 7. 12/11</h2>
+<h2 id="sesión-8.-1311">Sesión 8. 13/11</h2>
+<h2 id="sesión-9.-1911">Sesión 9. 19/11</h2>
+<h2 id="sesión-10.-2011">Sesión 10. 20/11</h2>
+<h3 id="tresca">TRESCA</h3>
+<ul>
+<li><a href="https://nymag.com/intelligencer/2021/05/covid-19-vaccine-politics-are-tearing-apart-families.html">https://nymag.com/intelligencer/2021/05/covid-19-vaccine-politics-are-tearing-apart-families.html</a></li>
+</ul>
+<h3 id="datos-urbanos">Datos urbanos</h3>
+<ul>
+<li><a href="https://twitter.com/MarJungle/status/1462556934196842497?t=jpNtHi1UEeNxh01QEFf6uw&amp;s=09">https://twitter.com/MarJungle/status/1462556934196842497?t=jpNtHi1UEeNxh01QEFf6uw&amp;s=09</a></li>
+<li><a href="https://www.laopiniondemurcia.es/comunidad/2021/11/21/juez-imputa-cartagena-parque-balsas-59779804.html">https://www.laopiniondemurcia.es/comunidad/2021/11/21/juez-imputa-cartagena-parque-balsas-59779804.html</a></li>
+<li><a href="https://www.nationalgeographic.com.es/naturaleza/actualidad/6-zonas-espana-contaminadas-por-radiacion-nuclear_13251">https://www.nationalgeographic.com.es/naturaleza/actualidad/6-zonas-espana-contaminadas-por-radiacion-nuclear_13251</a></li>
+<li></li>
+</ul>
+<h3 id="datavis">Datavis</h3>
+<ul>
+<li><a href="https://www.visualisingdata.com/resources/">https://www.visualisingdata.com/resources/</a></li>
+<li><a href="https://flowingdata.com/chart-types/">https://flowingdata.com/chart-types/</a></li>
+<li><a href="https://www.data-to-viz.com/">https://www.data-to-viz.com/</a></li>
+<li><a href="https://datavizcatalogue.com/">https://datavizcatalogue.com/</a></li>
+<li><a href="https://www.r-graph-gallery.com/">https://www.r-graph-gallery.com/</a></li>
+<li><a href="https://www.python-graph-gallery.com/">https://www.python-graph-gallery.com/</a></li>
+<li><a href="http://nosolousabilidad.com/articulos/taxonomia_visualizacion.htm">http://nosolousabilidad.com/articulos/taxonomia_visualizacion.htm</a></li>
+<li><a href="https://benfry.com/">https://benfry.com/</a></li>
+<li><a href="https://flowingdata.com/2018/11/02/how-to-make-frequency-trails-in-r/">https://flowingdata.com/2018/11/02/how-to-make-frequency-trails-in-r/</a></li>
+<li><a href="https://github.com/rougier/scientific-visualization-book">https://github.com/rougier/scientific-visualization-book</a></li>
+</ul>
+<h3 id="openrefine">OpenRefine</h3>
+<ul>
+<li><a href="https://guides.library.unlv.edu/open-refine/">https://guides.library.unlv.edu/open-refine/</a></li>
+<li><a href="https://guides.library.illinois.edu/openrefine/">https://guides.library.illinois.edu/openrefine/</a></li>
+<li><a href="https://guides.library.illinois.edu/openrefine/">https://guides.library.illinois.edu/openrefine/</a></li>
+<li><a href="https://docs.openrefine.org/manual/columnediting">https://docs.openrefine.org/manual/columnediting</a></li>
+<li><a href="https://casci.umd.edu/wp-content/uploads/2013/12/OpenRefine-tutorial-v1.5.pdf">https://casci.umd.edu/wp-content/uploads/2013/12/OpenRefine-tutorial-v1.5.pdf</a></li>
+<li><a href="https://kb.refinepro.com/2011/09/countif-in-google-refine-with.html">https://kb.refinepro.com/2011/09/countif-in-google-refine-with.html</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine">https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine</a></li>
+<li></li>
+</ul>
+<h3 id="p5.js">p5.js</h3>
+<ol>
+<li><p>Mapbox</p>
+<ul>
+<li><a href="https://account.mapbox.com/access-tokens">https://account.mapbox.com/access-tokens</a></li>
+<li><a href="https://github.com/cvalenzuela/Mappa/tree/master/examples/tile/Leaflet">https://github.com/cvalenzuela/Mappa/tree/master/examples/tile/Leaflet</a></li>
+<li><a href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh">https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh</a></li>
+</ul></li>
+</ol>
+<h3 id="alba-g.-corral">Alba G. Corral</h3>
+<ul>
+<li><a href="https://janebeta7.dropmark.com/1099900">https://janebeta7.dropmark.com/1099900</a></li>
+<li><a href="https://mappa.js.org/docs/examples-leaflet.html">https://mappa.js.org/docs/examples-leaflet.html</a></li>
+</ul>
+<h2 id="sesión-11.-2611">Sesión 11. 26/11</h2>
+<h2 id="sesión-12.-2712">Sesión 12. 27/12</h2>
+<h1 id="ejemplos">Ejemplos</h1>
+<ul>
+<li>Ciudad Desigual: <a href="https://jllopc.github.io/ciudad.desigual/">https://jllopc.github.io/ciudad.desigual/</a></li>
+<li>Territorio de datos: <a href="https://territoriodedatos.org">https://territoriodedatos.org</a></li>
+<li>Why American public transit is so bad, <a href="https://www.vox.com/videos/21529609/usa-public-transit-trains-buses-cars">https://www.vox.com/videos/21529609/usa-public-transit-trains-buses-cars</a></li>
+<li>NPR, Housing Segregation, Let's Talk: Video housing segregation in everything, <a href="https://www.npr.org/sections/codeswitch/2018/04/11/601494521/video-housing-segregation-in-everything">https://www.npr.org/sections/codeswitch/2018/04/11/601494521/video-housing-segregation-in-everything</a></li>
+<li>Serie NPR: <a href="https://www.npr.org/series/718730324/video">https://www.npr.org/series/718730324/video</a></li>
+<li>Implant Files: <a href="https://medicaldevices.icij.org/">https://medicaldevices.icij.org/</a></li>
+<li>Offshore Leaks, <a href="https://offshoreleaks.icij.org/">https://offshoreleaks.icij.org/</a></li>
+<li>Wikileaks, <a href="https://wikileaks.org/">https://wikileaks.org/</a></li>
+<li>NICAR, <a href="https://www.ire.org/nicar/">https://www.ire.org/nicar/</a></li>
+<li>TRESCA, <a href="https://trescaproject.eu">https://trescaproject.eu</a>, Trustworthy, Reliable and Engaging Scientific Communication Approaches</li>
+</ul>
+<h2 id="r">R</h2>
+<p>R es un lenguaje de programación libre de análisis estadístico. Es decir, es similar a trabajar con:</p>
+<ul>
+<li>Excel, si lo utilizas con esa finalidad.</li>
+<li>SPSS, de IBM.</li>
+<li>Stata</li>
+<li>otros...</li>
+</ul>
+<h3 id="trabajar-con-r">Trabajar con R</h3>
+<p>Hay varias opciones para trabajar con R:</p>
+<ul>
+<li>La propia consola de R que lanzamos desde la terminal.</li>
+<li>El programa GUI que abre la consola de R.</li>
+<li>El programa RStudio.</li>
+</ul>
+<h3 id="instalación-de-la-consola">Instalación de la consola</h3>
+<p>De momento vamos a instalar la consola para las próximas sesiones:</p>
+<ul>
+<li>En Cygwin, <code>apt-cyg install R</code></li>
+<li>En OSX, <code>brew install r</code> si no quieres la versión gráfica o <code>brew cask install r</code> si quieres la GUI de R.</li>
+<li>En Debian/Ubuntu GNU/Linux, <code>sudo apt install r-base</code></li>
+</ul>
+<h3 id="enlaces">Enlaces</h3>
+<ul>
+<li><a href="https://timogrossenbacher.ch/2015/12/why-data-journalists-should-start-using-r-in-2016/">Why data journalists should start using R in 2016</a>.</li>
+<li><a href="https://smach.github.io/R4JournalismBook/HowDoI.html">How Do I?...(do that in R)</a></li>
+<li><a href="http://rstudio-pubs-static.s3.amazonaws.com/6975_c4943349b6174f448104a5513fed59a9.html">http://rstudio-pubs-static.s3.amazonaws.com/6975_c4943349b6174f448104a5513fed59a9.html</a></li>
+<li><a href="https://www.r-bloggers.com/cross-tabulation-with-xtabs-exercises/">https://www.r-bloggers.com/cross-tabulation-with-xtabs-exercises/</a></li>
+</ul>
+<h3 data-url="https://github.com/bbc/bbplot" id="bbplot">BBPlot</h3>
+<p>R package that helps create and export ggplot2 charts in the style used by the BBC News data team</p>
+<h3 id="katie-jolly">Katie Jolly</h3>
+<p>Es el caso de <a href="https://www.katiejolly.io/">Katie Jolly</a> tal como explica en su artículo <a href="https://www.katiejolly.io/blog/2019-04-25/data-driven-design">Data Driven Design</a>: Data-driven design in 'Curious City: In, Out, Above, Beyond Saint Paul', donde expone su interés por el llamado "information design" o diseño de información y cómo utiliza R y software de diseño gráfico para crear una visualización llamada "Turning the Page" para el libro "Curious City: In, Out, Above, Beyond Saint Paul".</p>
+<p><a href="https://www.katiejolly.io/blog//assets/curious-city/kjolly_final.png">https://www.katiejolly.io/blog//assets/curious-city/kjolly_final.png</a></p>
+<p>El interés le vino siguiendo el trabajo de <a href="https://spatial.ly/">James Chesire</a> que suponía que, dado que era un usuario de <a href="https://cran.r-project.org/">R</a> y de <a href="https://ggplot2.tidyverse.org/">ggplot2</a>, igual usaba software libre.</p>
+<p><a href="https://www.katiejolly.io/blog//assets/curious-city/treasures_before_after.jpg">https://www.katiejolly.io/blog//assets/curious-city/treasures_before_after.jpg</a></p>
+<p>De hecho el ejemplo anterior está sacado del artículo <a href="http://theinformationcapital.com/coder-designer/">The coder and the designer</a> donde cuenta su experiencia con R y cómo se apoya en sus visualizaciones para el arte final.</p>
+<h3 data-url="https://bbc.github.io/rcookbook/" id="bbc-r-and-data-journalism-cookbook-for-r-graphics">BBC R and Data Journalism Cookbook for R Graphics</h3>
+<p>At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.</p>
+<h1 id="datos-1">Datos</h1>
+<h2 id="recursos-libres">Recursos libres</h2>
+<ul>
+<li>Freesound: <a href="https://freesound.org/search/?q=zaragoza">https://freesound.org/search/?q=zaragoza</a></li>
+<li>Wikimedia: <a href="https://commons.wikimedia.org/w/index.php?search=zaragoza&amp;title=Special:MediaSearch&amp;go=Go&amp;type=image">https://commons.wikimedia.org/w/index.php?search=zaragoza&amp;title=Special:MediaSearch&amp;go=Go&amp;type=image</a></li>
+<li>Archive: <a href="https://archive.org/search.php?query=zaragoza">https://archive.org/search.php?query=zaragoza</a></li>
+<li>Gutenberg Project: <a href="https://www.gutenberg.org/ebooks/search/?query=zaragoza&amp;submit_search=Go%21">https://www.gutenberg.org/ebooks/search/?query=zaragoza&amp;submit_search=Go%21</a></li>
+</ul>
+<h2 id="zaragoza">Zaragoza</h2>
+<ul>
+<li>Datos abiertos Zaragoza: <a href="https://www.zaragoza.es/sede/portal/datos-abiertos/">https://www.zaragoza.es/sede/portal/datos-abiertos/</a></li>
+<li>El bosque de los zaragozanos: <a href="https://www.zaragoza.es/sede/portal/medioambiente/elbosquedeloszaragozanos/area-descargas">https://www.zaragoza.es/sede/portal/medioambiente/elbosquedeloszaragozanos/area-descargas</a></li>
+<li>Contratación pública: <a href="https://www.zaragoza.es/sede/servicio/contratacion-publica/">https://www.zaragoza.es/sede/servicio/contratacion-publica/</a></li>
+<li>Información polínica, <a href="https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/polen/servicio/informacion-polen/">https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/polen/servicio/informacion-polen/</a></li>
+<li>Calidad del aire: <a href="https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/">https://www.zaragoza.es/sede/portal/medioambiente/calidad-aire/</a></li>
+<li></li>
+</ul>
+<h2 id="datos-de-prueba">Datos de prueba</h2>
+<ul>
+<li><a href="https://visdatasets.github.io/">Dataset for visualisation construction</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1oHcxlAbkTJmqfOxYQM22cvjjjRf5pETIF30x7L-qybc/edit#gid=0">The Guardian Polls</a></li>
+</ul>
+<h2 id="españa">España</h2>
+<ul>
+<li><a href="http://aduanas.camaras.org/">Base de datos de comercio exterior</a></li>
+<li><a href="http://www.cnmv.es/portal/home.aspx">CNMV</a></li>
+<li>Ejército, <a href="http://www.ejercito.mde.es/unidades/Madrid/index.html">http://www.ejercito.mde.es/unidades/Madrid/index.html</a></li>
+<li>INE, <a href="http://www.ine.es/prensa/epa_tabla.htm">http://www.ine.es/prensa/epa_tabla.htm</a></li>
+<li>datos.gob.es, <a href="https://datos.gob.es">https://datos.gob.es</a></li>
+<li>IGN, <a href="https://datos.ign.es/">https://datos.ign.es/</a></li>
+</ul>
+<h2 id="contaminación">Contaminación</h2>
+<ul>
+<li>Red Nacional de estaciones de medición: <a href="https://sig.mapama.gob.es/calidad-aire/">https://sig.mapama.gob.es/calidad-aire/</a></li>
+<li>Datos oficiales Calidad del Aire 2018: <a href="https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/datos/Datos_oficiales_2018.aspx">https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/evaluacion-datos/datos/Datos_oficiales_2018.aspx</a></li>
+<li>La mortalidad por cáncer en ciudades situadas en las proximidades de incineradoras e instalaciones para la recuperación o eliminación de residuos peligrosos: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0013935116311197?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S0013935116311197?via%3Dihub</a></li>
+<li>Asociación entre Incineradoras de Residuos Municipales y Cáncer de mama invasivo: <a href="http://www.casmadrid.org/index.php/documentos/1163-asociacion-entre-incineradoras-de-residuos-municipales-y-cancer-de-mama-invasivo">http://www.casmadrid.org/index.php/documentos/1163-asociacion-entre-incineradoras-de-residuos-municipales-y-cancer-de-mama-invasivo</a></li>
+<li>Datos diarios Madrid 2001 - 2020: <a href="https://datos.madrid.es/sites/v/index.jsp?vgnextoid=aecb88a7e2b73410VgnVCM2000000c205a0aRCRD&amp;vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD">https://datos.madrid.es/sites/v/index.jsp?vgnextoid=aecb88a7e2b73410VgnVCM2000000c205a0aRCRD&amp;vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD</a></li>
+</ul>
+<h2 id="covid19">COVID19</h2>
+<ul>
+<li><a href="https://github.com/CSSEGISandData/COVID-19/">https://github.com/CSSEGISandData/COVID-19/</a></li>
+</ul>
+<h1 id="software">Software</h1>
+<h2 id="cygwin">Cygwin</h2>
+<h3 id="apt-cyg">apt-cyg</h3>
+<p>El gestor de paquetes de Cygwin, sigue las <a href="https://github.com/transcode-open/apt-cyg">instrucciones</a> oficiales o consulta mi <a href="https://flowsta.github.io/bases-periodismo-datos/#org47541ce">manual</a>.</p>
+<h2 id="brew">brew</h2>
+<p><a href="https://flowsta.github.io/bases-periodismo-datos/#orgf689bc4">Brew</a> es el gestor de paquetes para el emulador de Terminal de Mac.</p>
+<h2 id="wsl">WSL</h2>
+<h2 id="nano">nano</h2>
+<h3 id="nanorc">nanorc</h3>
+<h2 id="editor-de-textos">Editor de textos</h2>
+<p>Se recomienda nano pero si queréis otra opción <a href="https://blog.infotics.es/2015/11/11/editor-de-textos/">aquí tenéis</a> una lista con algunos de los más usados</p>
+<h2 id="navegador-gráfico">Navegador gráfico</h2>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></li>
+<li><a href="https://www.chromium.org/Home">Chromium</a> o <a href="https://www.google.com/chrome">Chrome</a></li>
+<li><a href="https://www.opera.com/es">Opera</a></li>
+</ul>
+<h2 id="git">Git</h2>
+<ul>
+<li><a href="https://git-scm.com">Página oficial</a></li>
+<li><a href="https://github.com">Github</a></li>
+<li><a href="https://gitlab.com">Gitlab</a></li>
+<li><a href="https://flowsta.github.io/github">Manual de Adolfo Antón Bravo</a></li>
+</ul>
+<h2 id="python-1">Python</h2>
+<h3 id="instalación">Instalación</h3>
+<p>Podemos instalarlo de <a href="https://www.python.org/downloads/">python.org</a> o bien desde la terminal. Instalamos la versión 3 porque la rama 2 ya está con fecha de caducidad.</p>
+<ol>
+<li><p>Windows Cygwin</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="ex">apt-cyg</span> install python3</span></code></pre></div></li>
+<li><p>OSX Brew</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="ex">brew</span> install python3</span></code></pre></div></li>
+<li><p>GNU/Linux (incluido WSL)</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="fu">sudo</span> apt install python3</span></code></pre></div></li>
+</ol>
+<h3 id="arrancamos-python">Arrancamos python</h3>
+<p>Una vez que lo tenemos instalado, si es desde la terminal, se lanza con <code>python</code> y veremos que el /prompt/ cambia y se pone con tres caracteres de "mayor que" <code>&gt;&gt;&gt;</code>.</p>
+<p>Para poder utilizar librerías lo mejor es instalar *pip* que es un gestor de librerías/paquetes en python.</p>
+<p>¡Buenas noticias! Desde la versión de python 3.4 viene con pip preinstalado! (también en la rama 2.7 desde la versión 2.7.9)</p>
+<h3 id="comprobar-versión">Comprobar versión</h3>
+<p>Lo podemos hacer con:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="ex">python</span> --version</span></code></pre></div>
+<p>Si tuvieras python2 y python3 instalado, aquí te podría salir la versión 2.7 y entonces tendrías que repetir el comando con <code>python3 --version</code> y acordarte de siempre llamar a python3. Este mensaje también te vale para <code>pip</code></p>
+<h3 id="pip">pip</h3>
+<p>Se puede comprobar que está instalado preguntando qué versión tiene:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="ex">pip</span> --version</span></code></pre></div>
+<p>Para cualquier duda se puede ir a la ayuda <a href="https://pip.pypa.io/en/stable/installation/">https://pip.pypa.io/en/stable/installation/</a></p>
+<h3 id="jupyter-1">Jupyter</h3>
+<h3 id="matplotlib"><a href="https://matplotlib.org/">Matplotlib</a></h3>
+<h3 id="bokeh"><a href="https://demo.bokeh.org/">Bokeh</a></h3>
+<h3 data-url="https://csvkit.readthedocs.io/en/latest/tutorial.html" id="csvkit-1">csvkit</h3>
+<p>Instalación:</p>
+<pre class="example"><code>pip install csvkit
+</code></pre>
+<h2 id="r-1">R</h2>
+<p>Descargarse <a href="https://www.r-project.org/">R</a> es fácil pero si os parece complicado podéis bajaros también <a href="https://rstudio.com/">R-Studio</a>.</p>
+<h3 id="rstudio">RStudio</h3>
+<h3 id="tidyverse">Tidyverse</h3>
+<h3 data-url="https://github.com/bbc/bbplot" id="bbplot-1">BBPlot</h3>
+<p>R package that helps create and export ggplot2 charts in the style used by the BBC News data team</p>
+<h3 data-url="https://bbc.github.io/rcookbook/" id="bbc-r-and-data-journalism-cookbook-for-r-graphics-1">BBC R and Data Journalism Cookbook for R Graphics</h3>
+<p>At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.</p>
+<h2 id="tabula">Tabula</h2>
+<h2 id="openrefine-1">OpenRefine</h2>
+<ul>
+<li>URL, <a href="https://openrefine.org">https://openrefine.org</a></li>
+<li>Manual de Adolfo Antón Bravo, <a href="https://github.com/flowsta/refine">https://github.com/flowsta/refine</a></li>
+</ul>
+<h2 id="tesseract">Tesseract</h2>
+<h2 id="sistemas-operativos">Sistemas operativos</h2>
+<ul>
+<li>Debian GNU/Linux: <a href="https://debian.org">https://debian.org</a></li>
+<li>Ubuntu GNU/Linux: <a href="https://ubuntu.org">https://ubuntu.org</a></li>
+<li>Tails: <a href="https://tails.boum.org/">https://tails.boum.org/</a></li>
+</ul>
+<h2 id="vpn">VPN</h2>
+<p><a href="https://riseup.net/en/vpn">https://riseup.net/en/vpn</a></p>
+<h2 id="convert">convert</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="ex">convert</span> *.jpeg archivo.pdf</span></code></pre></div>
+<h2 id="web">Web</h2>
+<h3 id="plantillas-html">Plantillas HTML</h3>
+<ul>
+<li>Plantillas HTML5 en <a href="https://html5up.net/">https://html5up.net/</a></li>
+<li>Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+</ul>
+<h3 id="ssg">SSG</h3>
+<p>/Static Site Generator/ o sistemas de generación de contenido estático:</p>
+<ul>
+<li>Jekyll, <a href="https://jekyllrb.com/">https://jekyllrb.com/</a></li>
+<li>Hugo, <a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li></li>
+</ul>
