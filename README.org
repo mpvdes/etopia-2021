@@ -127,6 +127,48 @@ Lanzamos:
 #+begin_example
 jupyter notebook
 #+end_example
+** Sesión 6. 6/11
+** Sesión 7. 12/11
+** Sesión 8. 13/11
+** Sesión 9. 19/11
+** Sesión 10. 20/11
+*** TRESCA
+- https://nymag.com/intelligencer/2021/05/covid-19-vaccine-politics-are-tearing-apart-families.html
+*** Datos urbanos
+- https://twitter.com/MarJungle/status/1462556934196842497?t=jpNtHi1UEeNxh01QEFf6uw&s=09
+- https://www.laopiniondemurcia.es/comunidad/2021/11/21/juez-imputa-cartagena-parque-balsas-59779804.html
+- https://www.nationalgeographic.com.es/naturaleza/actualidad/6-zonas-espana-contaminadas-por-radiacion-nuclear_13251
+- 
+*** Datavis
+- https://www.visualisingdata.com/resources/
+- https://flowingdata.com/chart-types/
+- https://www.data-to-viz.com/
+- https://datavizcatalogue.com/
+- https://www.r-graph-gallery.com/
+- https://www.python-graph-gallery.com/
+- http://nosolousabilidad.com/articulos/taxonomia_visualizacion.htm
+- https://benfry.com/
+- https://flowingdata.com/2018/11/02/how-to-make-frequency-trails-in-r/
+- https://github.com/rougier/scientific-visualization-book
+*** OpenRefine
+- https://guides.library.unlv.edu/open-refine/
+- https://guides.library.illinois.edu/openrefine/
+- https://guides.library.illinois.edu/openrefine/
+- https://docs.openrefine.org/manual/columnediting
+- https://casci.umd.edu/wp-content/uploads/2013/12/OpenRefine-tutorial-v1.5.pdf
+- https://kb.refinepro.com/2011/09/countif-in-google-refine-with.html
+- https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine
+- 
+*** p5.js
+**** Mapbox
+- https://account.mapbox.com/access-tokens
+- https://github.com/cvalenzuela/Mappa/tree/master/examples/tile/Leaflet
+- https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh
+*** Alba G. Corral
+- https://janebeta7.dropmark.com/1099900
+- https://mappa.js.org/docs/examples-leaflet.html
+** Sesión 11. 26/11
+** Sesión 12. 27/12
 
 * Ejemplos
 - Ciudad Desigual: https://jllopc.github.io/ciudad.desigual/
