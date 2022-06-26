@@ -168,8 +168,122 @@ jupyter notebook
 - https://janebeta7.dropmark.com/1099900
 - https://mappa.js.org/docs/examples-leaflet.html
 ** Sesión 11. 26/11
-** Sesión 12. 27/12
+*** Servicios curly
+**** El tiempo
+#+begin_src shell
+  curl wttr.in
+#+end_src
+**** IP
+#+begin_src shell
+  curl ipinfo.io/ip
+#+end_src
+**** 
+*** Bootstrap
+*** iframe
+https://developer.mozilla.org/es/docs/Web/HTML/Element/iframe
+https://developer.mozilla.org.cach3.com/es/docs/Web/HTML/Elemento/iframe
+*** Aspecto de la terminal
+**** Color theme zenburn
+Clonamos este repositorio: https://github.com/sonatard/color-theme-zenburn:
+#+begin_src shell
+  git clone https://github.com/sonatard/color-theme-zenburn.git
+#+end_src
+Se puede usar de dos maneras, la primera para probarlo y la segunda para hacerlo persistente.
+La primera:
+#+begin_src shell
+cd color-theme-zenburn
+sh zenburn.sh
+#+end_src
+La segunda:
 
+** Sesión 12. 27/11
+*** Rickrolling
+Vamos a echar un ojo a algunas [[https://infotics.es/articulo/herramientas-curiosas-en-la-linea-de-comandos/][herramientas curiosas]].
+
+Abre la terminal y ejecuta:
+#+begin_src shell
+  curl -s -L http://bit.ly/10hA8iC | bash
+#+end_src
+Un script disponible en su repositorio de github: https://github.com/keroserene/rickrollrc/blob/master/roll.sh
+
+¡SORPRESA! Acabas de ser rickroleado :-)
+
+[[https://en.wikipedia.org/wiki/Rickrolling][Rickrolling]] es:
+#+begin_quote
+ is a prank and an Internet meme involving an unexpected appearance of the music video for the 1987 song "Never Gonna Give You Up," performed by the English singer Rick Astley. The meme is a type of bait and switch using a disguised hyperlink that leads to the music video. When victims click on a seemingly unrelated link, the site with the music video loads instead of what was expected, and they have been "Rickrolled". The meme has also extended to using the song's lyrics, or singing it, in unexpected contexts.
+https://en.wikipedia.org/wiki/Rickrolling
+#+end_quote
+La autora de esta broma hecha con =curl= es KeroSerene ([[https://twitter.com/kiserene][twitter]],  [[https://github.com/keroserene][github]] e  y tiene proyectos tan chulos como este https://github.com/keroserene/wikicodex
+
+Otra vía de rickrollear es =curl ascii.live/rick=
+*** Aplicaciones modernas para la línea de comandos
+
+Acabas de empezar y ya sientes que necesitas algo más? Igual este artículo te da las claves:
+https://infotics.es/articulo/diez-aplicaciones-modernas-para-la-linea-de-comandos/
+*** HTML
+- Un documento markdown con Lorem Ipsum: https://gist.github.com/DominikAngerer/b4a29b5ec9a69fc09546882586bc2d6b y https://gist.githubusercontent.com/DominikAngerer/b4a29b5ec9a69fc09546882586bc2d6b/raw/aeab6fdd6dbbcb7626e2ef2a8123e677cc19dcc1/lorem-markdown.md
+
+*** nano
+Atajos de teclado recomendados (suelen funcionar también en la terminal):
+- =C-a=, ir al principio de línea.
+- =C-e=, ir al final de línea
+- =C-cursor_derecha=, avanza una ~palabra~
+- =C-cursor_izqda=, retrocede una ~palabra~
+- =M-/=, va a la última línea
+- =M-\=, va a la primera línea
+*** editores de texto visuales
+- https://code.visualstudio.com/
+- https://www.barebones.com/products/bbedit/index.html
+- https://notepad-plus-plus.org/
+
+*** Proyectos
+- Alberto, https://borraja.github.io/etopia-2021/
+- Ana, https://anamgil.github.io/etopia-2021/
+- Cristina, https://heraldoaragon.github.io/mi_repositorio/
+- Fran, https://frandolz.github.io/Curso-Etopia-2021/
+- José, https://borraja.github.io/etopia-2021/
+- MPMAPI, https://mpmapi.github.io/etopia-visualizacion-datos/
+- Noemí, https://noemico.github.io/curso-etopia/
+- zzmhs4, https://zzmhs4.github.io/etopia_2021/
+- Nacho, https://ngimenez82.github.io/CursoEtopia/
+- Sonia, https://sonysluna.github.io/comunica-2021/
+- 
+
+*** git
+Hay alternativas, opciones o complementos para trabajar de otras formas con repositorios git:
+- Github CLI, https://cli.github.com/ es la terminal de git de Github. Tiene comandos que solo funcionan para Github.
+- Git bash, https://git-scm.com/download/win
+- https://github.com/jiarcos/git-para-dummies
+- Cambiar el editor por defecto: =git config --global core.editor "nano"=
+
+*** Terminal en W$
+Recordemos opciones para tener una terminal Unix en Windows:
+- Cygwin, la que hemos empezado a usar.
+- WSL, Windows Serving Linux, una virtualización de una terminal de una máquina GNU/Linux en Windows.
+- MSYS2, https://www.msys2.org/. Utiliza una versión del gestor de paquetes [[https://archlinux.org/packages/][pacman]] de [[https://archlinux.org/][Archlinux]] por lo que está más actualizada que Cygwin.
+- Mintty, https://mintty.github.io/, la que utizan Cygwin y MSYS2.
+
+*** Msys2
+Sincronizar la lista de paquetes:
+
+#+begin_src shell
+  pacman -Syu
+#+end_src
+Instalar GCC para empezar a compilar:
+#+begin_src shell
+  pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+#+end_src
+
+*** Trabajos
+- https://github.com/ngimenez82/CursoEtopia
+- https://ngimenez82.github.io/CursoEtopia/
+- https://github.com/AnaMGil/etopia-2021
+- https://github.com/noemico/curso-etopia
+- https://github.com/Borraja/etopia-2021
+- https://github.com/AlbertoGamez/Etopia-2021
+- https://github.com/mpmapi/etopia-visualizacion-datos
+- https://github.com/SonySLuna/comunica-2021
+- https://github.com/zzmhs4/etopia_2021
 * Ejemplos
 - Ciudad Desigual: https://jllopc.github.io/ciudad.desigual/
 - Territorio de datos: https://territoriodedatos.org
@@ -181,6 +295,8 @@ jupyter notebook
 - Wikileaks, https://wikileaks.org/
 - NICAR, https://www.ire.org/nicar/
 - TRESCA, https://trescaproject.eu, Trustworthy, Reliable and Engaging Scientific Communication Approaches
+- Travel Time Tube Map: http://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/
+- Dollars for Docs, https://projects.propublica.org/docdollars/, http://dansnguyen.github.io/posts/dollars-for-docs/, https://www.propublica.org/nerds/using-google-refine-for-data-cleaning, https://projects.propublica.org/docdollars/doctors/pid/31019
 
 ** R
 R es un lenguaje de programación libre de análisis estadístico. Es decir, es similar a trabajar con:
@@ -227,6 +343,9 @@ De hecho el ejemplo anterior está sacado del artículo [[http://theinformationc
     :END:
 At the BBC data team, we have developed an R package and an R cookbook to make the process of creating publication-ready graphics in our in-house style using R’s ggplot2 library a more reproducible process, as well as making it easier for people new to R to create graphics.
 
+** Instituto Geográfico Nacional
+http://www.ign.es/ign/main/index.do
+
 * Datos
 ** Recursos libres
 - Freesound: https://freesound.org/search/?q=zaragoza
@@ -260,17 +379,20 @@ At the BBC data team, we have developed an R package and an R cookbook to make t
 - https://github.com/CSSEGISandData/COVID-19/
 
 * Software
-** Cygwin
-*** apt-cyg
+** Emulador de terminal
+*** Cygwin
+**** apt-cyg
 El gestor de paquetes de Cygwin, sigue las [[https://github.com/transcode-open/apt-cyg][instrucciones]] oficiales o consulta mi [[https://flowsta.github.io/bases-periodismo-datos/#org47541ce][manual]].
+*** Mobaxterm
+https://mobaxterm.mobatek.net/
 
-** brew
+*** brew
 [[https://flowsta.github.io/bases-periodismo-datos/#orgf689bc4][Brew]] es el gestor de paquetes para el emulador de Terminal de Mac.
-** WSL
-** nano
-*** nanorc
+*** WSL
 ** Editor de textos
 Se recomienda nano pero si queréis otra opción [[https://blog.infotics.es/2015/11/11/editor-de-textos/][aquí tenéis]] una lista con algunos de los más usados
+*** nano
+**** nanorc
 ** Navegador gráfico
 - [[https://www.mozilla.org/en-US/firefox/new/][Firefox]]
 - [[https://www.chromium.org/Home][Chromium]] o [[https://www.google.com/chrome][Chrome]]
@@ -300,7 +422,22 @@ brew install python3
 #+begin_src bash
 sudo apt install python3
 #+end_src
+*** Problemas Python
+python2-numpy
+python2-six
+python2-wheel
+python2-setuptools
+python2-pip
+python2-cython
+python-devel
+gcc-core
+gcc-fortran
+gcc-g++
+make
+wget
 
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pandas
+https://pip.pypa.io/en/latest/user_guide/#installing-from-wheels
 *** Arrancamos python
 
 Una vez que lo tenemos instalado, si es desde la terminal, se lanza con ~python~ y veremos que el /prompt/ cambia y se pone con tres caracteres de "mayor que" ~>>>~.
@@ -383,3 +520,6 @@ convert *.jpeg archivo.pdf
 
 
 
+** Escritorio
+*** 7-zip
+https://7-zip.org/

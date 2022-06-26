@@ -38,6 +38,7 @@
             <div class="folium-map" id="map_af1e127fd57d4064b5c8a2b6e9958b32" ></div>
         
 </body>
+<script src="js/Leaflet.Spain.WMS.js"></script>
 <script>    
     
             var map_af1e127fd57d4064b5c8a2b6e9958b32 = L.map(
@@ -45,21 +46,27 @@
                 {
                     center: [41.649693, -0.887712],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 7,
+	            layers: [Spain_IGNBase,Spain_UnidadAdministrativa],
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
 
+ var overlayers = {
+"Unidades administrativas": Spain_UnidadAdministrativa
+                };
             
 
         
     
-            var tile_layer_95afa189eb9e4d2a9ef67be8feef66d4 = L.tileLayer(
+           var tile_layer_95afa189eb9e4d2a9ef67be8feef66d4 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             ).addTo(map_af1e127fd57d4064b5c8a2b6e9958b32);
         
+//add PNOA Layer to map.
+Spain_PNOA_Mosaico.addTo(map_af1e127fd57d4064b5c8a2b6e9958b32);
     
             var marker_db6b13071e8a47dc933b0e9cb9d2bec6 = L.marker(
                 [41.649693, -0.887712],
